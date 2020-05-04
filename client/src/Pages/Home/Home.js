@@ -5,8 +5,8 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-      <h1>Home</h1>
-      <p>Welcome to David Teaches Physics, your physics education assistant app.</p>
+      <h1>Welcome to David Teaches Physics</h1>
+      <p>Learning physics can be tough. Let's make it easier together.</p>
     </>
   )
 }
