@@ -11,6 +11,7 @@ const Navbar = () => {
       <div className="nav-content">
         <ul className="tabs tabs-transparent">
           <li className="tab left"><Link to="/"><i className="fas fa-home"></i></Link></li>
+          <li className="tab"><Link to="/lessons">Lessons</Link></li>
           <li className="tab"><Link to="/vocabulary">Vocabulary</Link></li>
         </ul>
       </div>

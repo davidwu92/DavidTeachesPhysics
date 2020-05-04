@@ -5,7 +5,7 @@ import React from 'react'
 const Vocabulary = () => {
   return (
     <>
-      <h1>Vocabulary</h1>
+      <h3 className="center">Vocabulary</h3>
     </>
   )
 }
