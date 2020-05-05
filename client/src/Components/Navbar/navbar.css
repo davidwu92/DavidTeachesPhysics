@@ -1,4 +1,8 @@
-
+#lessonDropdown {
+  min-width: 240px !important;
+  top: 64px !important;
+  background-color: black;
+}
 
 @media only screen 
 and (min-device-width : 300px)
