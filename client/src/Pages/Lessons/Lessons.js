@@ -8,7 +8,7 @@ const Lessons = () => {
       {/* PART ONE: CLASSICAL MECHANICS */}
       <div className="blue darken-1 white-text">
         <h3 className="center" style={{marginTop:"0"}}>Part One: Classical Mechanics</h3>
-        <h6 className="center" style={{margin:"0"}}><i>AKA Newtonian Mechanics. Part One consists of what one would expect to study in their first semester of Physics: Kinematics, Forces, Momentum/Energy, Circular Motion, and all other things pertaining to the motion of objects.</i></h6>
+        <h6 className="center" style={{margin:"0"}}><i>AKA Newtonian Mechanics. Most of this knowledge was discovered in the late 1600's, so now is a great time to start catching up on physics knowledge!</i></h6>
         <br></br>
       </div>
       <div className="row" style={{display:"flex", flexWrap:"wrap", marginBottom:0}}>
@@ -135,9 +135,9 @@ const Lessons = () => {
             </div>
         </div>
 
-          {/* 5. CENTRIPETAL MOTION */}
+          {/* 5. CIRCULAR MOTION */}
         <div className="col s12 m6 l6 blue lighten-4">
-          <h4 className="center">5. Centripetal Motion</h4>
+          <h4 className="center">5. Circular Motion</h4>
           <h6>Lesson 5.1 Intro to Rotational Kinematics</h6>
             <div style={{textIndent: "15px"}}>
               <li>Displacement, Velocity, and Acceleration: with a twist</li>    
@@ -175,7 +175,7 @@ const Lessons = () => {
       {/* PART TWO: ELECTROMAGNETISM*/}
       <div className="amber darken-2 white-text">
         <h3 className="center" style={{marginTop:"0"}}>Part Two: Electromagnetism</h3>
-        <h6 className="center" style={{margin:"0"}}><i>Everything from electrostatics, electrodynamics and circuits, to magnetic fields.</i></h6>
+        <h6 className="center" style={{margin:"0"}}><i>Electric charges and magnetics are complex phenomena. Let's cover everything from electrostatics, electrodynamics and circuits, to magnetic fields.</i></h6>
         <br></br>
       </div>
       <div className="row" style={{display:"flex", flexWrap:"wrap", marginBottom: 0}}>
@@ -252,13 +252,13 @@ const Lessons = () => {
 
         </div>
       </div>
+      
       {/* PART THREE: HEAT AND THERMO */}
       <div className="red darken-1 white-text">
         <h3 className="center" style={{marginTop:"0"}}>Part Three: Heat and Thermodynamics</h3>
-        <h6 className="center" style={{margin:"0"}}><i>Everything from calorimetry to thermodynamics and heat engines.</i></h6>
+        <h6 className="center" style={{margin:"0"}}><i>We've been harnessing energy via heat engines since the late 1700's. Everything from calorimetry to thermodynamics and heat engines.</i></h6>
         <br></br>
       </div>
-
       <div className="row" style={{display:"flex", flexWrap:"wrap", marginBottom: 0}}>
         {/* 10. CALORIMETRY */}
         <div className="col s12 m6 l6 red lighten-4">
@@ -308,7 +308,7 @@ const Lessons = () => {
       {/* PART FOUR: WAVES AND OPTICS */}
       <div className="green darken-1 white-text">
         <h3 className="center" style={{marginTop:"0"}}>Part Four: Periodic Motion, Waves, and Optics</h3>
-        <h6 className="center" style={{margin:"0"}}><i>From pendulums to Sound Waves and Electromagnetic Radiation, waves and optics are an incredibly important part of our daily lives.</i></h6>
+        <h6 className="center" style={{margin:"0"}}><i>From pendulums and sounds to electromagnetic radiation and lenses, waves and optics have quite the myriad of application in today's world.</i></h6>
         <br></br>
       </div>
       <div className="row" style={{display:"flex", flexWrap:"wrap", marginBottom: 0}}>
