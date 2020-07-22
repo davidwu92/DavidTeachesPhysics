@@ -10,6 +10,9 @@ import Home from './Pages/Home'
 import Vocabulary from './Pages/Vocabulary'
 import Lessons from './Pages/Lessons'
 
+import KinematicsContent from './Pages/Lessons/Kinematics/KinematicsContent'
+import Lesson1_1 from './Pages/Lessons/Kinematics/Lesson1_1'
+
 function App() {
 
   return (
@@ -37,7 +40,15 @@ function App() {
 
       <Switch>
         <Route exact path="/kinematics">
-        <Navbar/>
+          <Navbar/>
+          <KinematicsContent/>
+        </Route>
+      </Switch>
+
+      <Switch>
+        <Route exact path="/lesson1_1">
+          <Navbar/>
+          <Lesson1_1/>
         </Route>
       </Switch>
 
