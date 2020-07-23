@@ -1,7 +1,9 @@
 //Pages/Lessons/Kinematics.js
 import React from 'react'
 // import { useHistory } from 'react-router-dom'
-
+//https://github.com/talyssonoc/react-katex
+import 'katex/dist/katex.min.css';
+import { BlockMath, InlineMath } from 'react-katex';
 
 const Lesson1_1 = () => {
   return (
@@ -26,16 +28,16 @@ const Lesson1_1 = () => {
         </h6>
       </div>
 
+
       <div className="row">
         <div id="section1" className="green lighten-5" style={{padding:"1vh 6vw"}}>
           <h4 className="green-text text-darken-3">Accuracy vs. Precision</h4>
           <p>Physics is a lab science; any data we acquire and analyze should have some degree of error involved. For a super-quick debrief about all the relevant lab science vocab, consider Bob's attempt to calculate the value of π:</p>
           <div className="green lighten-4" style={{padding: "1% 3%", margin:"0 6vw"}}>
-            <em>
-              <p>Hypothetical Bob grabs a string, a ruler, and his mother's set of differently-sized circular dinner plates.</p>
-              <p>He measures the circumferences (C) and diameters (D) of each plate, and uses a pocket calculator to find π.</p>
-              <p>After three plates of data collection, he finds the average of his 3 π values, and approximates that π is about 3.22.</p>
-            </em>
+              <h5 class="right"><InlineMath>{"π=\\frac{\\text{C}}{\\text{D}}"}</InlineMath></h5>
+              <p><em>Hypothetical Bob grabs a string, a ruler, and his mother's set of differently-sized circular dinner plates.</em></p>
+              <p><em>He measures the circumferences (C) and diameters (D) of each plate, and uses a pocket calculator to find π.</em></p>
+              <p><em>After three plates of data collection, he finds the average of his 3 π values, and approximates that π is about 3.22.</em></p>
           </div>
 
           <p>Bob has three different calculations of π, so he's completed 3 <b>trials</b>.</p>
@@ -121,8 +123,7 @@ const Lesson1_1 = () => {
           <h5>Analyzing Vectors</h5>
           <p style={{textIndent: "30px"}}>Mathematical operations with scalars generally aren't any more complicated than basic arithmetic. Add 50 grams of sugar to 500 grams of water, and you get an unsurprising 550 grams' worth of sugary solution. A 4-foot x 5-foot rectangular space has an area of 20 ft<sup>2</sup>. When adding, subtracting, or multiplying vectors, however... we'll need to pull in bigger math guns, and use trigonometry to our advantage.</p>
           <p>We generally represent 2-dimensional vectors in one of two ways: either with a magnitude and angle above the horizontal (the positive x-axis), or with two component vectors.</p>
-          
-          <h1>More work here</h1>
+          <h5><InlineMath>{String.raw`\vec{v}=v_x + v_y`}</InlineMath></h5>
         </div>{/* END OF VECTORS/SCALARS */}
 
         <div id="section3" className="green lighten-5" style={{padding:"1vh 6vw"}}>
