@@ -1,6 +1,8 @@
 //Pages/Lessons/Kinematics.js
 import React from 'react'
 // import { useHistory } from 'react-router-dom'
+// https://github.com/wko27/react-mathjax
+
 
 const Lesson1_1 = () => {
   return (
