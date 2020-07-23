@@ -7,7 +7,7 @@ const Lessons = () => {
     <>
       {/* PART ONE: CLASSICAL MECHANICS */}
       <div className="blue darken-1 white-text">
-        <h3 className="center" style={{marginTop:"0"}}>Part One: Classical Mechanics</h3>
+        <h3 className="center" style={{marginTop:"0"}}>Unit One: Classical Mechanics</h3>
         <h6 className="center" style={{margin:"0"}}><i>AKA Newtonian Mechanics. Most of this knowledge was discovered in the late 1600's, so now is a great time to start catching up on physics knowledge!</i></h6>
         <br></br>
       </div>
@@ -17,7 +17,7 @@ const Lessons = () => {
           <h4 className="center">1. Kinematics</h4>
           <h6>Lesson 1.1 Intro to Kinematics</h6>
             <div style={{textIndent: "15px"}}>
-              <li>Physics as a Lab Science: Accuracy, Precision, and the SI System</li>
+              <li>Physics as a Lab Science: Accuracy vs. Precision</li>
               <li>Vectors and Scalars</li>
               <li>Displacement, Velocity, Acceleration</li>
               <li>Graphing Motion</li>
@@ -174,7 +174,7 @@ const Lessons = () => {
 
       {/* PART TWO: ELECTROMAGNETISM*/}
       <div className="amber darken-2 white-text">
-        <h3 className="center" style={{marginTop:"0"}}>Part Two: Electromagnetism</h3>
+        <h3 className="center" style={{marginTop:"0"}}>Unit Two: Electromagnetism</h3>
         <h6 className="center" style={{margin:"0"}}><i>Electric charges and magnetics are complex phenomena. Let's cover everything from electrostatics, electrodynamics and circuits, to magnetic fields.</i></h6>
         <br></br>
       </div>
@@ -255,7 +255,7 @@ const Lessons = () => {
       
       {/* PART THREE: HEAT AND THERMO */}
       <div className="red darken-1 white-text">
-        <h3 className="center" style={{marginTop:"0"}}>Part Three: Heat and Thermodynamics</h3>
+        <h3 className="center" style={{marginTop:"0"}}>Unit Three: Heat and Thermodynamics</h3>
         <h6 className="center" style={{margin:"0"}}><i>We've been harnessing energy via heat engines since the late 1700's. Everything from calorimetry to thermodynamics and heat engines.</i></h6>
         <br></br>
       </div>
@@ -307,7 +307,7 @@ const Lessons = () => {
 
       {/* PART FOUR: WAVES AND OPTICS */}
       <div className="green darken-1 white-text">
-        <h3 className="center" style={{marginTop:"0"}}>Part Four: Periodic Motion, Waves, and Optics</h3>
+        <h3 className="center" style={{marginTop:"0"}}>Unit Four: Periodic Motion, Waves, and Optics</h3>
         <h6 className="center" style={{margin:"0"}}><i>From pendulums and sounds to electromagnetic radiation and lenses, waves and optics have quite the myriad of application in today's world.</i></h6>
         <br></br>
       </div>

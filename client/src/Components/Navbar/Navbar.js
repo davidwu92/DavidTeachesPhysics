@@ -28,16 +28,14 @@ const Navbar = () => {
                   inst && inst.open();
                 }}
               >
-                LESSONS <i class="material-icons right"
+                UNITS <i class="material-icons right"
                   style={{position: "relative", padding:"0px",top: "-18px",margin: 0}}>arrow_drop_down</i>
               </a></h5>
               <ul id="lessonDropdown" className="dropdown-content">
-                <li><Link to="/kinematics">1. Kinematics</Link></li>
-                <li><Link to="/forces">2. Forces</Link></li>
-                <li><Link to="/impulse-momentum">3. Impulse and Momentum</Link></li>
-                <li><Link to="/work-energy">4. Work and Energy</Link></li>
-                <li><Link to="/circular-motion">5. Circular Motion</Link></li>
-                <li><Link to="/review-classical-mech">6. Classical Mechanics Review</Link></li>
+                <li><Link to="/classical-mechanics">1. Classical Mech</Link></li>
+                <li><Link to="/electrodynamics">2. Electromagnetism</Link></li>
+                <li><Link to="/thermodynamics">3. Thermodynamics</Link></li>
+                <li><Link to="/periodic-motion-waves">4. Periodic Motion/Waves</Link></li>
               </ul>
             </li>
             <li><h5><Link to="/lessons">LESSON LIST</Link></h5></li>

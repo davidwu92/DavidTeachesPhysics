@@ -10,8 +10,9 @@ import Home from './Pages/Home'
 import Vocabulary from './Pages/Vocabulary'
 import Lessons from './Pages/Lessons'
 
-import KinematicsContent from './Pages/Lessons/Kinematics/KinematicsContent'
-import Lesson1_1 from './Pages/Lessons/Kinematics/Lesson1_1'
+import KinematicsContent from './Pages/Lessons/ClassicalMechanics/Kinematics/KinematicsContent'
+import ClassicalMechanics from './Pages/Lessons/ClassicalMechanics/ClassicalMechanics.js'
+import Lesson1_1 from './Pages/Lessons/ClassicalMechanics/Kinematics/Lesson1_1'
 
 function App() {
 
@@ -35,6 +36,13 @@ function App() {
         <Route exact path="/vocabulary">
           <Navbar/>
           <Vocabulary />
+        </Route>
+      </Switch>
+
+      <Switch>
+        <Route exact path="/classical-mechanics">
+          <Navbar/>
+          <ClassicalMechanics/>
         </Route>
       </Switch>
 
