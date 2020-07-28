@@ -137,44 +137,72 @@ const Lesson1_1 = () => {
 
           <div className="row">
             <div className="col s12 m7 l7">
-              <p><b>Displacement</b> is the vector equivalent of <b>distance</b>; both are measured in meters (m). While distance, <em>d</em>, represents how far meters an object has travelled (or how far apart two points are), displacement is defined as the <em>change in position</em>. If "x" represents where an object lies along a horizontal axis, we use Δx ("delta-x") to represent the <em>change in "x"</em> AKA the horizontal displacement.</p>
+              <h5>Displacement, the change in position</h5>
+              <p><b>Displacement</b> is the vector equivalent of <b>distance</b>; both are measured in meters (m). While distance, <em>d</em>, represents how far meters an object has travelled (or how far apart two points are), displacement is defined as an object's <em>change in position</em>. If "x" represents where an object lies along a horizontal axis, we use Δx ("delta-x") to represent the <em>change in "x"</em> AKA the horizontal displacement.</p>
               <div className="row">
                 <div className="col s6 m6 l6">
                   <h6 className="center"><InlineMath>{String.raw`Δx=x_f - x_i`}</InlineMath></h6>
-                </div>
-                <div className="col s6 m6 l6">
                   <h6 className="center"><InlineMath>{String.raw`Δy=y_f - y_i`}</InlineMath></h6>
                 </div>
+                <div className="col s6 m6 l6">
+                  <p style={{textIndent: "20px"}}>Here, <em>x<sub>i</sub></em> and <em>x<sub>f</sub></em> represent the initial and final x-positions, measured from the origin (usually). Delta (Δ) is the "change in" some value, and that change is found by subtracting the final - initial.</p>
+                </div>
+                <div className="col s6 m6 l6">
+                  <h6 className="center"><InlineMath>{String.raw`θ=\arctan\frac{Δy}{Δx} = \tan^{-1}\frac{Δy}{Δx}`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6">
+                  <p style={{textIndent: "20px"}}>We might also care about the displacement vector's angle above or below the horizontal, <em>θ</em> ("Theta").</p>
+                </div>
               </div>
               
             </div>
             <div className="col s12 m5 l5">
-              <h1 className="grey-text">Displacement sim</h1>
+              <iframe src="https://scratch.mit.edu/projects/414214236/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
           </div>
           <div className="row">
             <div className="col s12 m7 l7">
-              <p><b>Velocity</b> is the vector equivalent of <b>speed</b>; both are measured in meters per second (<InlineMath>{String.raw`\frac{m}{s}`}</InlineMath>). Since time, <em>t</em>, is measured in seconds...</p>
+              <h5>Velocity, the rate of change in position</h5>
+              <p><b>Velocity</b> is the vector equivalent of <b>speed</b>; both are measured in meters per second (<InlineMath>{String.raw`\frac{m}{s}`}</InlineMath>).</p>
               <div className="row">
                 <div className="col s6 m6 l6">
-                  <h6 className="center"><InlineMath>{String.raw`\vec{v_x}=\frac{Δx}{t}`}</InlineMath></h6>
-                  <h6 className="center"><InlineMath>{String.raw`\vec{v_y}=\frac{Δy}{t}`}</InlineMath></h6>
-                  <em>Since velocity is a vector, we can break down its x- and y- components</em>
+                  <h6 className="center"><BlockMath>{String.raw`\overrightarrow {v_{avg}}=\frac{displacement}{time}`}</BlockMath></h6>
+                  <p className="center"><em>Since velocity is a vector, we can break it into x- and y- components.</em></p>
+                  <div className="col s6 m6 l6">
+                    <h6 className="center"><BlockMath>{String.raw`\vec{v_x}=\frac{Δx}{t}`}</BlockMath></h6>
+                  </div>
+                  <div className="col s6 m6 l6">
+                    <h6 className="center"><BlockMath>{String.raw`\vec{v_y}=\frac{Δy}{t}`}</BlockMath></h6>
+                  </div>
                 </div>
                 <div className="col s6 m6 l6">
+                  <br/>
+                  <h6 className="center"><InlineMath>{String.raw`speed = \frac{distance}{time}`}</InlineMath></h6>
+                  <p><em>As scalars, neither distance nor speed can be negative. The magnitude of velocity, <InlineMath>{String.raw`|\vec{v}|`}</InlineMath> is generally equal to the speed while the object travels in a straight line.</em></p>
                   <h6 className="center"><InlineMath>{String.raw`s = \frac{d}{t}`}</InlineMath></h6>
-                  <em>Speed "s" is a scalar, as is distance "d"; neither of them can be negative values.</em>
                 </div>
               </div>
-              
+              <div className="row">
+                  <p>Given a speed an direction,(i.e. 10 m/s, 40 degrees above the horizontal), we can calculate the components <InlineMath>{String.raw`v_x`}</InlineMath> and <InlineMath>{String.raw`v_y`}</InlineMath> pretty easily!</p>
+                <div className="col s6 m6 l6">
+                  <h6 className="center"><InlineMath>{String.raw`v_x=v\cos{\theta}`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6">
+                  <h6 className="center"><InlineMath>{String.raw`v_y=v\sin{\theta}`}</InlineMath></h6>
+                </div>
+                <p>Writing or typing <InlineMath>{String.raw`|\vec{v}|`}</InlineMath> is the equivalent of saying "magnitude of the velocity vector". From now on, <InlineMath>{String.raw`v`}</InlineMath> shall represent the magnitude of velocity (speed).</p>
+              </div>
             </div>
             <div className="col s12 m5 l5">
-              <h1 className="grey-text">Velocity sim</h1>
+            <iframe src="https://scratch.mit.edu/projects/414268766/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
           </div>
+          
+          
           <div className="row">
             <div className="col s12 m7 l7">
-              <p><b>Acceleration</b> is defined as the rate of change in velocity; therefore, it is measured in meters per second-squared (<InlineMath>{String.raw`\frac{m}{s^2}`}</InlineMath>).</p>
+              <h5>Acceleration, the rate of change in velocity</h5>
+              <p><b>Acceleration</b> is measured in meters per second-squared (<InlineMath>{String.raw`\frac{m}{s^2}`}</InlineMath>).</p>
               <div className="row">
                 <div className="col s6 m6 l6">
                   <h6 className="center"><InlineMath>{String.raw`a = \frac{Δ\vec{v}}{t}=\frac{\vec{v_f} - \vec{v_i}}{t}`}</InlineMath></h6>
@@ -200,8 +228,7 @@ const Lesson1_1 = () => {
 
 
           <h1 className="grey-text center grey lighten-2">diagrams and practice</h1>
-        </div>{/* END OF ACCURACY/PRECISION */}
-
+        </div>{/* END OF ACCURACY/PRECISION */}        
         
       </div>
     </>
