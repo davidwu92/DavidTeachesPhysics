@@ -4,6 +4,8 @@ import React from 'react'
 //https://github.com/talyssonoc/react-katex
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
+import joeDisplacement from './joeDisplacement.png'
+
 
 const Lesson1_1 = () => {
   return (
@@ -160,6 +162,108 @@ const Lesson1_1 = () => {
               <iframe src="https://scratch.mit.edu/projects/414214236/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
           </div>
+
+          <div className="yellow lighten-4 row">
+            <h6 className="center">Example Problems on Displacement</h6>
+              <div className="col s12 m6 l6">
+                <div className="card">
+                  <div className="card-content" style={{minHeight: "50vh"}}>
+                    <span className="card-title activator grey-text text-darken-4">Finding Total Displacement using Components<i className="material-icons right">more_vert</i></span>
+                    <p style={{textIndent: "20px"}}>Joe takes a walk from his house. He walks 20 meters North, then turns 30 degrees right and walks 40 more meters forward.</p>
+                    <p><em>Note: That second bit of walking can be expressed using a <b>bearing</b>: N30<sup>o</sup>E, which reads "30 degrees East of North".</em></p><br/>
+                    <p>A. Find Joe's x- and y-displacements: Δx and Δy.</p> <br/>
+                    <p>B. How far is he from his house?</p><br/>
+                    <p>C. How is that different from the total amount he walked?</p><br/>
+                  </div>
+                  <div className="card-reveal">
+                    <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                    <p className="left">With most physics problems, it helps to draw a quick diagram.</p>
+                    <div className="col s6 m6 l6">
+                      <p>Let's get the x- and y- components of each vector (in meters); then we can add them to find the total Δx and Δy.</p>
+                      <span className="red-text left"><InlineMath>{String.raw`Δx=0`}</InlineMath></span>
+                      <span className="red-text right"><InlineMath>{String.raw`Δy=20`}</InlineMath></span>  
+                      <br/>
+                      <br/>
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=40\sin{30^{\circ}}`}</InlineMath></span>
+                      <span className="blue-text right"><InlineMath>{String.raw`Δy=40\cos{30^{\circ}}`}</InlineMath></span>  
+                      <br/>
+                      <br/>
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=20`}</InlineMath></span>
+                      <span className="blue-text right"><InlineMath>{String.raw`Δy=34.64`}</InlineMath></span>  
+                      <br/>
+                      <br/>
+                      <p>Notice that in this case, we used sine for x and cosine for y; this is because the angle provided isn't actually the angle above the horizontal: it's 30 degrees from the <em>vertical</em>!</p>
+                      <p><b>A. Δx = 20m and Δy = 54.64m</b></p>
+                    </div>
+                    <div className="col s6 m6 l6">
+                      <img src={joeDisplacement} width="100%"/>
+                    </div>
+                    <div className="col s12 m12 l12">
+                      <p>Now the distance from the origin (Joe's house) can be found using the Pythagorean theorem...</p>
+                      <p><InlineMath>{String.raw`d^2={(Δx)}^2+{(Δy)}^2`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`d=\sqrt{{(Δx)}^2+{(Δy)}^2}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`d=\sqrt{{(20m)}^2+{(54.64m)}^2}`}</InlineMath></p>
+                      <p><b>B. <InlineMath>{String.raw`d=58.19 m`}</InlineMath> away from his starting position.</b></p>
+                    </div>
+                    <div className="col s12 m12 l12">
+                      <p><b>C. Joe walked 60 meters total (20m, then 40 m).</b> Turning doesn't change the fact that Joe's has 60 more meters' worth of walking today by the end of his journey; but turning will affect his final position (and, of course, his displacement!)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col s12 m6 l6">
+                <div className="card"> 
+                  <div className="card-content" style={{minHeight: "50vh"}}>
+                    <span className="card-title activator grey-text text-darken-4">Finding Vector Components<i className="material-icons right">more_vert</i></span>
+                    <p style={{textIndent: "20px"}}>Problem</p>
+                    <p>A. </p> <br/>
+                    <p>B. </p><br/>
+                    <p>C. </p><br/>
+                  </div>
+                  <div className="card-reveal">
+                    <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                    <p>The solution.</p>
+                    <div className="col s6 m6 l6">
+                      <p>Let's get the x- and y- components of each vector (in meters); then we can add them to find the total Δx and Δy.</p>
+                      <span className="red-text left"><InlineMath>{String.raw`Δx=0`}</InlineMath></span>
+                      <span className="red-text right"><InlineMath>{String.raw`Δy=20`}</InlineMath></span>  
+                      <br/>
+                      <br/>
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=40\sin{30^{\circ}}`}</InlineMath></span>
+                      <span className="blue-text right"><InlineMath>{String.raw`Δy=40\cos{30^{\circ}}`}</InlineMath></span>  
+                      <br/>
+                      <br/>
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=20`}</InlineMath></span>
+                      <span className="blue-text right"><InlineMath>{String.raw`Δy=34.64`}</InlineMath></span>  
+                      <br/>
+                      <br/>
+                      <p>Notice that in this case, we used sine for x and cosine for y; this is because the angle provided isn't actually the angle above the horizontal: it's 30 degrees from the <em>vertical</em>!</p>
+                      <p><b>A. Δx = 20m and Δy = 54.64m</b></p>
+                    </div>
+                    <div className="col s6 m6 l6">
+                      <img src={joeDisplacement} width="100%"/>
+                    </div>
+                    <div className="col s12 m12 l12">
+                      <p>Now the distance from the origin (Joe's house) can be found using the Pythagorean theorem...</p>
+                      <p><InlineMath>{String.raw`d^2={(Δx)}^2+{(Δy)}^2`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`d=\sqrt{{(Δx)}^2+{(Δy)}^2}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`d=\sqrt{{(20m)}^2+{(54.64m)}^2}`}</InlineMath></p>
+                      <p><b>B. <InlineMath>{String.raw`d=58.19 m`}</InlineMath> away from his starting position.</b></p>
+                    </div>
+                    <div className="col s12 m12 l12">
+                      <p><b>C. Joe walked 60 meters total (20m, then 40 m).</b> Turning doesn't change the fact that Joe's has 60 more meters' worth of walking today by the end of his journey; but turning will affect his final position (and, of course, his displacement!)</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col s12 m6 l6">
+
+              </div>
+              <div className="col s12 m6 l6">
+
+              </div>
+          </div>
+
           <div className="row">
             <div className="col s12 m7 l7">
               <h5>Velocity, the rate of change in position</h5>
@@ -183,21 +287,20 @@ const Lesson1_1 = () => {
                 </div>
               </div>
               <div className="row">
-                  <p>Given a speed an direction,(i.e. 10 m/s, 40 degrees above the horizontal), we can calculate the components <InlineMath>{String.raw`v_x`}</InlineMath> and <InlineMath>{String.raw`v_y`}</InlineMath> pretty easily!</p>
+                  <p>Given a velocity vector in the form of speed + angle (i.e. 10 m/s, 40 degrees above the horizontal), we can calculate its components <InlineMath>{String.raw`v_x`}</InlineMath> and <InlineMath>{String.raw`v_y`}</InlineMath> pretty easily!</p>
                 <div className="col s6 m6 l6">
                   <h6 className="center"><InlineMath>{String.raw`v_x=v\cos{\theta}`}</InlineMath></h6>
                 </div>
                 <div className="col s6 m6 l6">
                   <h6 className="center"><InlineMath>{String.raw`v_y=v\sin{\theta}`}</InlineMath></h6>
                 </div>
-                <p>Writing or typing <InlineMath>{String.raw`|\vec{v}|`}</InlineMath> is the equivalent of saying "magnitude of the velocity vector". From now on, <InlineMath>{String.raw`v`}</InlineMath> shall represent the magnitude of velocity (speed).</p>
+                <p>Writing or typing <InlineMath>{String.raw`|\vec{v}|`}</InlineMath> is the equivalent of saying "magnitude of the velocity vector". We'll use <InlineMath>{String.raw`v`}</InlineMath> to represent the magnitude of velocity (speed), and <InlineMath>{String.raw`\vec{v}`}</InlineMath> when we refer to a velocity vector.</p>
               </div>
             </div>
             <div className="col s12 m5 l5">
             <iframe src="https://scratch.mit.edu/projects/414268766/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
           </div>
-          
           
           <div className="row">
             <div className="col s12 m7 l7">
