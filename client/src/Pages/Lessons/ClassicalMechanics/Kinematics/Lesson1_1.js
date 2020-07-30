@@ -5,6 +5,7 @@ import React from 'react'
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
 import joeDisplacement from './joeDisplacement.png'
+import sueDisplacement from './sueDisplacement.png'
 
 
 const Lesson1_1 = () => {
@@ -162,67 +163,60 @@ const Lesson1_1 = () => {
               <iframe src="https://scratch.mit.edu/projects/414214236/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
           </div>
-
+          {/* DISPLACEMENT EXAMPLE PROBLEMS */}
           <div className="yellow lighten-4 row">
             <h6 className="center">Example Problems on Displacement</h6>
               <div className="col s12 m6 l6">
-                <div className="card">
+                <div className="card"> 
                   <div className="card-content" style={{minHeight: "50vh"}}>
-                    <span className="card-title activator grey-text text-darken-4">Finding Total Displacement using Components<i className="material-icons right">more_vert</i></span>
-                    <p style={{textIndent: "20px"}}>Joe takes a walk from his house. He walks 20 meters North, then turns 30 degrees right and walks 40 more meters forward.</p>
-                    <p><em>Note: That second bit of walking can be expressed using a <b>bearing</b>: N30<sup>o</sup>E, which reads "30 degrees East of North".</em></p><br/>
-                    <p>A. Find Joe's x- and y-displacements: Δx and Δy.</p> <br/>
-                    <p>B. How far is he from his house?</p><br/>
-                    <p>C. How is that different from the total amount he walked?</p><br/>
+                    <span className="card-title activator grey-text text-darken-4">Ex 1. Trigonometry and Displacement Vector Components<i className="material-icons right">more_vert</i></span>
+                    <p style={{textIndent: "20px", fontWeight: "500"}}>Sue uses a 2.30-meter wooden plank to play with her toy cars. The ramp descends with an angle of 25 degrees below the horizontal, and Sue happily rolls her cars down from the top of the ramp.</p><br/>
+                    <p style={{fontWeight: "500"}}>A. Find Δx and Δy for the cars as they move down the ramp.</p> <br/>
+                    <p style={{fontWeight: "500"}}>B. Sue moves her wooden plank to a new position, such that the top side of the ramp has a height of 0.45 meters. Find the new Δx for cars moving down this ramp, and find the new angle of descent.</p><br/>
                   </div>
                   <div className="card-reveal">
                     <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                    <p className="left">With most physics problems, it helps to draw a quick diagram.</p>
+                    <p>The first step to solving most physics problems is to draw a diagram (or two).</p>
                     <div className="col s6 m6 l6">
-                      <p>Let's get the x- and y- components of each vector (in meters); then we can add them to find the total Δx and Δy.</p>
-                      <span className="red-text left"><InlineMath>{String.raw`Δx=0`}</InlineMath></span>
-                      <span className="red-text right"><InlineMath>{String.raw`Δy=20`}</InlineMath></span>  
+                      <p><b>A. Using SOHCAHTOA...</b></p>
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=d\cos{\theta}`}</InlineMath></span>
+                      <span className="red-text right"><InlineMath>{String.raw`Δy=d\sin{\theta}`}</InlineMath></span>  
                       <br/>
                       <br/>
-                      <span className="blue-text left"><InlineMath>{String.raw`Δx=40\sin{30^{\circ}}`}</InlineMath></span>
-                      <span className="blue-text right"><InlineMath>{String.raw`Δy=40\cos{30^{\circ}}`}</InlineMath></span>  
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=2.3\cos{25^{\circ}}`}</InlineMath></span>
+                      <span className="red-text right"><InlineMath>{String.raw`Δy=2.3\sin{25^{\circ}}`}</InlineMath></span>  
                       <br/>
                       <br/>
-                      <span className="blue-text left"><InlineMath>{String.raw`Δx=20`}</InlineMath></span>
-                      <span className="blue-text right"><InlineMath>{String.raw`Δy=34.64`}</InlineMath></span>  
+                      <span className="blue-text left"><InlineMath>{String.raw`Δx=2.085 m`}</InlineMath></span>
+                      <span className="red-text right"><InlineMath>{String.raw`Δy=0.972m m`}</InlineMath></span>  
                       <br/>
                       <br/>
-                      <p>Notice that in this case, we used sine for x and cosine for y; this is because the angle provided isn't actually the angle above the horizontal: it's 30 degrees from the <em>vertical</em>!</p>
-                      <p><b>A. Δx = 20m and Δy = 54.64m</b></p>
+                      <p><b>B. Notice that θ, the angle of depression, is the same as the angle of elevation from the bottom right hand side of the ramp (between the blue and brown lines). Given length of the hypotenuse (rather, I should say magnitude of the displacement vector) of 2.3 meters and the "opposite side" Δy...</b></p>
+                      <p><InlineMath>{String.raw`\sin{\theta}=\frac{Δy}{d}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{Δy}{d}}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{0.45}{2.3}}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`\theta = 11.3^{\circ}`}</InlineMath></p>
+                      <p>It's not a terrible idea to use cosine or tangent functions to find Δx. However, my recommendation is to use the Pythagorean Theorem to find </p>
                     </div>
                     <div className="col s6 m6 l6">
-                      <img src={joeDisplacement} width="100%"/>
-                    </div>
-                    <div className="col s12 m12 l12">
-                      <p>Now the distance from the origin (Joe's house) can be found using the Pythagorean theorem...</p>
-                      <p><InlineMath>{String.raw`d^2={(Δx)}^2+{(Δy)}^2`}</InlineMath></p>
-                      <p><InlineMath>{String.raw`d=\sqrt{{(Δx)}^2+{(Δy)}^2}`}</InlineMath></p>
-                      <p><InlineMath>{String.raw`d=\sqrt{{(20m)}^2+{(54.64m)}^2}`}</InlineMath></p>
-                      <p><b>B. <InlineMath>{String.raw`d=58.19 m`}</InlineMath> away from his starting position.</b></p>
-                    </div>
-                    <div className="col s12 m12 l12">
-                      <p><b>C. Joe walked 60 meters total (20m, then 40 m).</b> Turning doesn't change the fact that Joe's has 60 more meters' worth of walking today by the end of his journey; but turning will affect his final position (and, of course, his displacement!)</p>
+                      <img src={sueDisplacement} width="100%"/>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col s12 m6 l6">
-                <div className="card"> 
+                <div className="card">
                   <div className="card-content" style={{minHeight: "50vh"}}>
-                    <span className="card-title activator grey-text text-darken-4">Finding Vector Components<i className="material-icons right">more_vert</i></span>
-                    <p style={{textIndent: "20px"}}>Problem</p>
-                    <p>A. </p> <br/>
-                    <p>B. </p><br/>
-                    <p>C. </p><br/>
+                    <span className="card-title activator grey-text text-darken-4">Ex 2. Finding Total Displacement using Components<i className="material-icons right">more_vert</i></span>
+                    <p style={{textIndent: "20px", fontWeight: "500"}}>Joe takes a walk from his house. He walks 20 meters North, then turns 30 degrees right and walks 40 more meters forward.</p>
+                    <p><em>Note: That second bit of walking can be expressed using a <b>bearing</b>: N30<sup>o</sup>E, which reads "30 degrees East of North".</em></p><br/>
+                    <p style={{fontWeight: "500"}}>A. Find Joe's x- and y-displacements: Δx and Δy.</p> <br/>
+                    <p style={{fontWeight: "500"}}>B. How far is he from his house?</p><br/>
+                    <p style={{fontWeight: "500"}}>C. How is that different from the total amount he walked?</p><br/>
                   </div>
                   <div className="card-reveal">
                     <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                    <p>The solution.</p>
+                    <p className="left">With most physics problems, it helps to draw a quick diagram.</p>
                     <div className="col s6 m6 l6">
                       <p>Let's get the x- and y- components of each vector (in meters); then we can add them to find the total Δx and Δy.</p>
                       <span className="red-text left"><InlineMath>{String.raw`Δx=0`}</InlineMath></span>
