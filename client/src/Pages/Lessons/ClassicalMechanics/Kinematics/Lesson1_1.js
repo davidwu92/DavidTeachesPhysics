@@ -6,6 +6,7 @@ import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
 import joeDisplacement from './joeDisplacement.png'
 import sueDisplacement from './sueDisplacement.png'
+import annieVelocity from './annieVelocity.png'
 
 
 const Lesson1_1 = () => {
@@ -138,7 +139,7 @@ const Lesson1_1 = () => {
           <h4 className="green-text text-darken-3">Displacement, Velocity, and Acceleration</h4>
           <p style={{textIndent: "30px"}}><b>These fundamental kinematics quantities are absolutely essential to your success as a physics student.</b> I'm not exaggerating when I say that almost all of the new ideas you'll study in physics will rely on one or more of these quantities! Mastering these equations, definitions, and problem-solving techniques early on will save you many days' worth of headaches.</p>
 
-          <div className="row">
+          <div className="row">{/* DISPLACEMENT CONTENT */}
             <div className="col s12 m7 l7">
               <h5>Displacement, the change in position</h5>
               <p><b>Displacement</b> is the vector equivalent of <b>distance</b>; both are measured in meters (m). While distance, <em>d</em>, represents how far meters an object has travelled (or how far apart two points are), displacement is defined as an object's <em>change in position</em>. If "x" represents where an object lies along a horizontal axis, we use Δx ("delta-x") to represent the <em>change in "x"</em> AKA the horizontal displacement.</p>
@@ -163,20 +164,21 @@ const Lesson1_1 = () => {
               <iframe src="https://scratch.mit.edu/projects/414214236/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
           </div>
-          {/* DISPLACEMENT EXAMPLE PROBLEMS */}
-          <div className="yellow lighten-4 row">
-            <h6 className="center">Example Problems on Displacement</h6>
-              <div className="col s12 m6 l6">
+          <div className="yellow lighten-4 row">{/* DISPLACEMENT EXAMPLE PROBLEMS */}
+            <h5 className="center">Displacement: Example Problems and Solutions</h5>            
+              <div className="col s12 m6 l6">{/* EX 1: SUE */}
                 <div className="card"> 
                   <div className="card-content" style={{minHeight: "50vh"}}>
-                    <span className="card-title activator grey-text text-darken-4">Ex 1. Trigonometry and Displacement Vector Components<i className="material-icons right">more_vert</i></span>
+                    <span className="card-title grey-text text-darken-4">Ex 1. Trig and Vector Components</span>
                     <p style={{textIndent: "20px", fontWeight: "500"}}>Sue uses a 2.30-meter wooden plank to play with her toy cars. The ramp descends with an angle of 25 degrees below the horizontal, and Sue happily rolls her cars down from the top of the ramp.</p><br/>
                     <p style={{fontWeight: "500"}}>A. Find Δx and Δy for the cars as they move down the ramp.</p> <br/>
-                    <p style={{fontWeight: "500"}}>B. Sue moves her wooden plank to a new position, such that the top side of the ramp has a height of 0.45 meters. Find the new Δx for cars moving down this ramp, and find the new angle of descent.</p><br/>
+                    <p style={{fontWeight: "500"}}>B. Sue moves her wooden plank to a new position, such that the top side of the ramp has a height of 0.45 meters. Find the new angle of descent, as well as Δx for cars moving down this ramp.</p><br/>
+                    <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                   </div>
                   <div className="card-reveal">
                     <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
                     <p>The first step to solving most physics problems is to draw a diagram (or two).</p>
+                    <p><em>Note that θ, the angle of depression, is the same as the angle of elevation from the bottom right hand side of the ramp.</em></p>
                     <div className="col s6 m6 l6">
                       <p><b>A. Using SOHCAHTOA...</b></p>
                       <span className="blue-text left"><InlineMath>{String.raw`Δx=d\cos{\theta}`}</InlineMath></span>
@@ -188,31 +190,43 @@ const Lesson1_1 = () => {
                       <br/>
                       <br/>
                       <span className="blue-text left"><InlineMath>{String.raw`Δx=2.085 m`}</InlineMath></span>
-                      <span className="red-text right"><InlineMath>{String.raw`Δy=0.972m m`}</InlineMath></span>  
+                      <span className="red-text right"><InlineMath>{String.raw`Δy=0.972m`}</InlineMath></span>  
                       <br/>
                       <br/>
-                      <p><b>B. Notice that θ, the angle of depression, is the same as the angle of elevation from the bottom right hand side of the ramp (between the blue and brown lines). Given length of the hypotenuse (rather, I should say magnitude of the displacement vector) of 2.3 meters and the "opposite side" Δy...</b></p>
-                      <p><InlineMath>{String.raw`\sin{\theta}=\frac{Δy}{d}`}</InlineMath></p>
-                      <p><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{Δy}{d}}`}</InlineMath></p>
-                      <p><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{0.45}{2.3}}`}</InlineMath></p>
-                      <p><InlineMath>{String.raw`\theta = 11.3^{\circ}`}</InlineMath></p>
-                      <p>It's not a terrible idea to use cosine or tangent functions to find Δx. However, my recommendation is to use the Pythagorean Theorem to find </p>
+                      <p><b>B. Using arcsine for θ...</b></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\sin{\theta}=\frac{Δy}{d}`}</InlineMath></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{Δy}{d}}`}</InlineMath></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{0.45}{2.3}}`}</InlineMath></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\theta = 11.3^{\circ}`}</InlineMath></p>
+                      <p><b>...and the Pythagorean Theorem...</b></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`(Δx)^2 + (Δy)^2 = d^2`}</InlineMath></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`Δx = \sqrt{d^2 - (Δy)^2}`}</InlineMath></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`Δx = \sqrt{(2.3)^2 - (0.45)^2}`}</InlineMath></p>
+                      <p style={{textIndent: "20px"}}><InlineMath>{String.raw`Δx = 2.26m`}</InlineMath></p>
                     </div>
                     <div className="col s6 m6 l6">
                       <img src={sueDisplacement} width="100%"/>
                     </div>
+                    <div className="col s12 m12 l12">
+                      <p>It's not a terrible idea to use cosine or tangent functions to find Δx. However, I believe it is better to <em>use given values whenever possible</em>, since we could've mistakenly calculated θ. So let's just check and see if our values for θ and Δx make sense!</p>
+                      <p style={{textIndent: "30px"}}><InlineMath>{String.raw`\tan{\theta} \stackrel{?}{=} \frac{Δy}{Δx}`}</InlineMath></p>
+                      <p style={{textIndent: "30px"}}><InlineMath>{String.raw`\tan{11.3^{\circ}} \stackrel{?}{=} \frac{0.45}{2.26}`}</InlineMath></p>
+                      <p style={{textIndent: "30px"}}><InlineMath>{String.raw`\tan{11.3^{\circ}} \stackrel{?}{=} \frac{0.45}{2.26}`}</InlineMath></p>
+                      <p style={{textIndent: "30px"}}><InlineMath>{String.raw`0.20 = 0.20`}</InlineMath><i class="material-icons">check</i></p>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div className="col s12 m6 l6">
+              <div className="col s12 m6 l6">{/* EX 2: JOE */}
                 <div className="card">
                   <div className="card-content" style={{minHeight: "50vh"}}>
-                    <span className="card-title activator grey-text text-darken-4">Ex 2. Finding Total Displacement using Components<i className="material-icons right">more_vert</i></span>
+                    <span className="card-title grey-text text-darken-4">Ex 2. Finding Total Displacement using Components</span>
                     <p style={{textIndent: "20px", fontWeight: "500"}}>Joe takes a walk from his house. He walks 20 meters North, then turns 30 degrees right and walks 40 more meters forward.</p>
                     <p><em>Note: That second bit of walking can be expressed using a <b>bearing</b>: N30<sup>o</sup>E, which reads "30 degrees East of North".</em></p><br/>
                     <p style={{fontWeight: "500"}}>A. Find Joe's x- and y-displacements: Δx and Δy.</p> <br/>
                     <p style={{fontWeight: "500"}}>B. How far is he from his house?</p><br/>
                     <p style={{fontWeight: "500"}}>C. How is that different from the total amount he walked?</p><br/>
+                    <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                   </div>
                   <div className="card-reveal">
                     <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
@@ -250,15 +264,15 @@ const Lesson1_1 = () => {
                   </div>
                 </div>
               </div>
-              <div className="col s12 m6 l6">
+              <div className="col s12 m6 l6">{/* EX 3 */}
 
               </div>
-              <div className="col s12 m6 l6">
+              <div className="col s12 m6 l6">{/* EX 4 */}
 
               </div>
           </div>
 
-          <div className="row">
+          <div className="row">{/* VELOCITY CONTENT */}
             <div className="col s12 m7 l7">
               <h5>Velocity, the rate of change in position</h5>
               <p><b>Velocity</b> is the vector equivalent of <b>speed</b>; both are measured in meters per second (<InlineMath>{String.raw`\frac{m}{s}`}</InlineMath>).</p>
@@ -294,9 +308,108 @@ const Lesson1_1 = () => {
             <div className="col s12 m5 l5">
             <iframe src="https://scratch.mit.edu/projects/414268766/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             </div>
+            <div className="col s12 m12 l12">
+              <h5>Average vs. Instantaneous Velocity</h5>
+              <div className="row" style={{marginBottom:"0px"}}>
+                <div className="col m1 l1"></div>
+                <div className="col s6 m4 l4">
+                  <p><b>Average velocity</b> is calculated using the object's displacement from t<sub>o</sub> to t<sub>f</sub>, the initial and final times of the motion; changes in speed/direction between those times are irrelevant in our calculation of v<sub>avg</sub>.</p>
+                </div>
+                <div className="col m1 l1"></div>
+                <div className="col s6 m4 l4">
+                  <p><b>Instantaneous velocity</b> is the speed and direction of an object at any instant in time. These two quantities can have the same values if the object's velocity remains constant!</p>
+                </div>
+                <div className="col m2 l2"></div>
+              </div>
+              <div className="row">
+                <div className="col s1 m2 l2"></div>
+                <div className="col s10 m8 l8">
+                  <p style={{textIndent: "20px"}}>Consider a 6-hour car trip from Los Angeles to San Francisco (about 400 miles). The average velocity of the car trip would be around 67 mph North, but the instantaneous velocity of the car at any given point would fluctuate depending on traffic, rest stops, etc. One would need access to the car's speedometer to know its instantaneous velocity at any particular point along the way!</p>
+                </div>
+                <div className="col s1 m2 l2"></div>
+              </div>
+            </div>
           </div>
           
-          <div className="row">
+          <div className="yellow lighten-4 row">{/* VELOCITY EXAMPLE PROBLEMS*/}
+            <h5 className="center">Velocity: Example Problems and Solutions</h5>
+            <div className="col s12 m6 l6">{/* EX 3: Concepts */}
+              <div className="card"> 
+                <div className="card-content" style={{minHeight: "50vh"}}>
+                  <span className="card-title grey-text text-darken-4">Ex 3. Average vs. Instantaneous Velocity</span>
+                  <p style={{textIndent: "20px", fontWeight: "500"}}>Tessa prepares to run around a circular track with a 500m radius. Starting at the Southmost point on the track, she runs counterclockwise at a constant speed around the track in 745 seconds, stopping in the same position where she started her run.</p><br/>
+                  <p style={{fontWeight: "500"}}>A. How much distance did Tessa cover? How fast was she running?</p> <br/>
+                  <p style={{fontWeight: "500"}}>B. What's Tessa's displacement? What's her average velocity?</p><br/>
+                  <p style={{fontWeight: "500"}}>C. Find Tessa's instantaneous velocities at t=0s and at t=478s. How are they different?</p><br/>
+                  <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+                </div>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                  <p>The distance around a circular track would be its circumference: <InlineMath>{String.raw`C=2πr`}</InlineMath></p>
+                  <p><b>A. Distance covered: <InlineMath>{String.raw`d=2πr=2π(500m)=3142m`}</InlineMath></b></p>
+                  <p><b>Tessa's speed: <InlineMath>{String.raw`s=\frac{d}{t}=\frac{3142m}{745s}=4.21m/s`}</InlineMath></b></p>
+
+                  <p><b>B. Since Tessa started and ended in the same position, her displacement and average velocity are both zero for this run!</b></p>
+                  <p>If her friend, Jim, started in the same position as Tessa but stood still for the entire 945 seconds, they'd both be in the same initial and final positions.</p>
+                  
+                  <p><b>C. Starting at the Southmost point @ t=0s, Tessa runs at a speed of 4.21m/s East.</b></p>
+                  <p><b> Halfway through her run @ t=478s, she's at the Northmost point in the track running at the same speed West!</b></p>
+                </div>
+              </div>
+            </div>
+
+            <div className="col s12 m6 l6">{/* EX 4: Annie */}
+              <div className="card"> 
+                <div className="card-content" style={{minHeight: "50vh"}}>
+                  <span className="card-title grey-text text-darken-4">Ex 4. Calculating Average Velocity</span>
+                  <p style={{textIndent: "20px", fontWeight: "500"}}>Annie hops in her car and drives 1.8 km due East in 1 minute, then turns left and goes 3.5 km due North in 2 minutes.</p><br/>
+                  <p style={{fontWeight: "500"}}>A. Find the magnitude of her average velocity in meters per second.</p> <br/>
+                  <p style={{fontWeight: "500"}}>B. Find the angle above the horizontal, θ, of her velocity vector.</p><br/>
+                  <p style={{fontWeight: "500"}}>C. Tom asks you to look over his solution. What's wrong with it?</p><br/>
+                  <div style={{width: "80%", marginLeft: "25px"}}>
+                    <span className="left"><InlineMath>{String.raw`v_x = \frac{1.8km}{1min} = 30m/s`}</InlineMath></span>
+                    <span  className="right"><InlineMath>{String.raw`v_y = \frac{3.5km}{2min} = 29.2m/s`}</InlineMath></span>
+                    <br/>
+                    <br/>
+                    <span className="left"><InlineMath>{String.raw`v = \sqrt{30^2+29.2^2} = 41.9m/s`}</InlineMath></span>
+                    <span className="right"><InlineMath>{String.raw`\theta = tan^{-1}(\frac{29.2}{30}) = 44.2^{\circ}`}</InlineMath></span>
+                  </div>
+                  <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+                </div>
+                  <div className="card-reveal">
+                    <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                    <p>For parts A and B, we can find Annie's avg velocity with one of two ways: 1. displacement over time, or 2. find the components of her velocity (v<sub>x</sub> and v<sub>y</sub>) and plug into the Pythagorean Theorem.</p>
+                    <div className="col s6 m6 l6">
+                      <p>Annie's displacement can be expressed with displacement vector, <InlineMath>{String.raw`\vec{Δr}`}</InlineMath>, where <em>r</em> represents her position along the imaginary line from start to finish of her journey. Think of Δr as analogous to "distance from her initial position in the r-direction".</p>
+                      <p><InlineMath>{String.raw`Δr = \sqrt{(Δx)^2+(Δy)^2}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`Δr = \sqrt{(1800m)^2+(3500m)^2}`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`Δr = 3936m`}</InlineMath></p>
+                      <p>Annie's final position is 3936 meters away from where she started in the <em>r-</em>direction! Since it took her 3 minutes to get there...</p>
+                      <p><InlineMath>{String.raw`v_{avg} = \frac{Δr}{t} = \frac{3936m}{180s}`}</InlineMath></p>
+                      <p><b>A. <InlineMath>{String.raw`v_{avg} = 21.86m/s`}</InlineMath></b></p>
+                    </div>
+                    <div className="col s6 m6 l6">
+                      <img src={annieVelocity} width="100%"/>
+                    </div>
+                    <div className="col s12 m12 l12">
+                      <p>As promised, there's a second way to find v<sub>avg</sub> using velocity components.</p>
+                      <p><InlineMath>{String.raw`v_{x} = \frac{Δx}{t} = \frac{1800m}{180s} = 10m/s`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`v_{y} = \frac{Δy}{t} = \frac{3500m}{180s} = 19.4m/s`}</InlineMath></p>
+                      <p><InlineMath>{String.raw`v_{avg} = \sqrt{v_x^2 + v_y^2} = \sqrt{(10m/s)^2 + (19.4m/s)^2} = 21.86m/s`}</InlineMath></p>
+                      <p>For the angle above the horizontal, θ, we can use components of either the position vector <InlineMath>{String.raw`\vec{r}`}</InlineMath> or velocity <InlineMath>{String.raw`\vec{v}`}</InlineMath>.</p>
+                      <p><b>B. </b><InlineMath>{String.raw`θ=tan^{-1}\frac{Δy}{Δx}=tan^{-1}\frac{3500m}{1800m}=62.78^{\circ}`}</InlineMath></p>
+                      <p><b>B. </b><InlineMath>{String.raw`θ=tan^{-1}\frac{v_y}{v_x}=tan^{-1}\frac{10m/s}{19.4m/s}=62.78^{\circ}`}</InlineMath></p>
+                      <br/>
+                      <p><b>C. The major issue with Tom's solution is that he used Annie's <u>instantaneous</u> velocities. True, for the first minute Annie moves at 30m/s East, then she spends two minutes travelling at 29.2m/s North; but average velocity takes into account the displacement and time for the <em>entire trip</em>.</b></p>
+                      <p>Tom probably could've avoided these issues if he had drawn a diagram of Annie's motion. The diagram we drew clearly shows that Annie's motion doesn't resemble the 45-45-90 triangle that Tom suggests!</p>
+                      <p>Tom's solution also implies that Annie's average velocity is higher than her speed at any point in her drive... which clearly can't be right!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+          <div className="row">{/* ACCELERATION CONTENT */}
             <div className="col s12 m7 l7">
               <h5>Acceleration, the rate of change in velocity</h5>
               <p><b>Acceleration</b> is measured in meters per second-squared (<InlineMath>{String.raw`\frac{m}{s^2}`}</InlineMath>).</p>
