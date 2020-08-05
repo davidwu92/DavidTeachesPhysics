@@ -91,8 +91,10 @@ const Lesson1_2 = () => {
             </div>
             
           </div>
-          <div className="col s12 m5 l5">
+          <div className="col s12 m5 l5 center">
+            <h6><em>Displacement Simulator</em></h6>
             <iframe src="https://scratch.mit.edu/projects/414214236/embed" allowtransparency="true" width="499" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <p><a target="_blank" href="https://scratch.mit.edu/projects/414214236/">Direct Link to Scratch</a></p>
           </div>
         </div>
         <div className="amber darken-1 row">{/* DISPLACEMENT EXAMPLE PROBLEMS */}
@@ -242,8 +244,10 @@ const Lesson1_2 = () => {
               <p className="center"><em>Writing or typing <InlineMath>{String.raw`|\vec{v}|`}</InlineMath> is the equivalent of saying "magnitude of the velocity vector". <br/>We'll use <InlineMath>{String.raw`v`}</InlineMath> to represent the magnitude of velocity (speed), and <InlineMath>{String.raw`\vec{v}`}</InlineMath> when we refer to a velocity vector.</em></p>
             </div>
           </div>
-          <div className="col s12 m5 l5">
+          <div className="col s12 m5 l5 center">
+            <h6><em>Velocity Simulator</em></h6>
             <iframe src="https://scratch.mit.edu/projects/414268766/embed" allowtransparency="true" width="485" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <p><a target="_blank" href="https://scratch.mit.edu/projects/414268766/">Direct Link to Scratch</a></p>
           </div>
 
           <div className="col s12 m12 l12 blue darken-4"></div>
@@ -408,8 +412,10 @@ const Lesson1_2 = () => {
 
             </div>
           </div>
-          <div className="col s12 m5 l5">
+          <div className="col s12 m5 l5 center">
+            <h5>1<em>D Acceleration</em> Simulator</h5>
             <iframe src="https://scratch.mit.edu/projects/415806627/embed" allowtransparency="true" width="499" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            <p><a target="_blank" href="https://scratch.mit.edu/projects/415806627">Direct Link to Scratch</a></p>
           </div>
         </div>
         <div className="amber darken-1 row"> {/* ACCERLATION EXAMPLES */}
@@ -584,10 +590,10 @@ const Lesson1_2 = () => {
           <div className="col s12 m7 l7">
             <p style={{textIndent: "30px"}}>Consider a ball thrown directly upward. Ignoring air resistance, the ball will have a constant acceleration of g = 9.8m/s<sup>2</sup> downward from the moment it leaves your hand to the moment it is caught or lands on the ground. If we use the y-direction to track vertical motion, this means that gravity will have no effect on the x-velocities of projectiles.</p>
           </div>
-          <div className="col s12 m5 l5">
+          <div className="col s12 m5 l5 center">
             {/* FREEFALL SIM */}
             <iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" width="500vw" height="375vw" scrolling="no" allowfullscreen></iframe>
-            <p>Direct link <a href="https://phet.colorado.edu/en/simulation/projectile-motion">Phet Simulation: Projectile Motion</a></p>
+            <p>Direct link <a target="_blank" href="https://phet.colorado.edu/en/simulation/projectile-motion">Phet Simulation: Projectile Motion</a></p>
           </div>
         </div>
         
