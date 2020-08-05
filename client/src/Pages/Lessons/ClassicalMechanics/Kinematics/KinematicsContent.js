@@ -11,11 +11,15 @@ const KinematicsContent = () => {
 
   return (
     <>
-      <h2 className="center">Kinematics Lessons</h2>
+      <div className="container">
+        <h2 className="center">Unit 1: Kinematics</h2>
 
-      <button className="green btn" onClick={()=>{history.push('/lesson1_1')}}>Lesson 1.1: Intro to Kinematics</button>
+        <button className="green btn" onClick={()=>{history.push('/lesson1_1')}}>Lesson 1.1: Physics as a Lab Science</button>
+        <br/>
+        <br/>
+        <button className="green btn" onClick={()=>{history.push('/lesson1_2')}}>Lesson 1.2: Intro to Kinematics: Displacement, Velocity, and Acceleration</button>
       
-
+      </div>
     </>
   )
 }

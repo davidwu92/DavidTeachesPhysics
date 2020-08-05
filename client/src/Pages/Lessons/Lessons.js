@@ -15,27 +15,30 @@ const Lessons = () => {
           {/* 1. KINEMATICS LESSONS */}
         <div className="col s12 m6 l6 blue lighten-4">
           <h4 className="center">1. Kinematics</h4>
-          <h6>Lesson 1.1 Intro to Kinematics</h6>
+          <h6>Lesson 1.1 Physics as a Lab Science</h6>
             <div style={{textIndent: "15px"}}>
               <li>Physics as a Lab Science: Accuracy vs. Precision</li>
               <li>Vectors and Scalars</li>
+            </div>
+          <h6>Lesson 1.2 Intro to Kinematics</h6>
+            <div style={{textIndent: "15px"}}>
               <li>Displacement, Velocity, Acceleration</li>
               <li>Graphing Motion</li>
               <li>Freefall and Acceleration Due to Gravity</li>
             </div>
-          <h6>Lesson 1.2 Equations of Motion in One Dimension</h6>
+          <h6>Lesson 1.3 Kinematics Equations in One Dimension</h6>
             <div style={{textIndent: "15px"}}>
                 <li>The Displacement Equation</li>
                 <li>The V-Squared Equation</li>
                 <li>1-D Motion: Problem-Solving Techniques</li>
             </div>
-          <h6>Lesson 1.3 The Equations of Motion in Two Dimensions</h6>
+          <h6>Lesson 1.4 Kinematics Equations in Two Dimensions</h6>
             <div style={{textIndent: "15px"}}>
               <li>The Displacement Equation</li>
               <li>The V-Squared Equation</li>
               <li>1-D Motion: Problem-Solving Techniques</li>
             </div>
-          <h6>Lesson 1.4 Review</h6>
+          <h6>Lesson 1.5 Review</h6>
             <div style={{textIndent: "15px"}}>
               <li>Big Picture Ideas in Kinematics</li>
               <li>Additional Practice</li>
