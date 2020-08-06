@@ -7,6 +7,7 @@ import { BlockMath, InlineMath } from 'react-katex';
 import joeDisplacement from './joeDisplacement.png'
 import sueDisplacement from './sueDisplacement.png'
 import annieVelocity from './annieVelocity.png'
+import freefallDiagram from './freefallDiagram.png'
 import { useHistory } from 'react-router-dom'
 
 const Lesson1_2 = () => {
@@ -594,7 +595,10 @@ const Lesson1_2 = () => {
         <p style={{textIndent: "30px"}}>Like all massive celestial objects, the Earth has a significant gravitational field that pulls in objects that have mass. On Earth's surface, this pull causes falling objects to accelerate toward the center of Earth at a rate of 9.8 m/s<sup>2</sup> (ignoring air resistance); this number decreases the futher we get from Earth's pull. We call this value the <b>acceleration due to gravity, g</b>. While g = 9.8 m/s<sup>2</sup> on the surface of Earth, g may be different on other planets and at different altitudes (but you'd have to be really, really high up for g to be significantly less than 9.8m/s<sup>2</sup>!)</p>
         <div className="row"> {/* FREEFALL CONTENT */}
           <div className="col s12 m7 l7">
-            <p style={{textIndent: "30px"}}>Consider a ball thrown directly upward. Ignoring air resistance, the ball will have a constant acceleration of g = 9.8m/s<sup>2</sup> downward from the moment it leaves your hand to the moment it is caught or lands on the ground. If we use the y-direction to track vertical motion, this means that gravity will have no effect on the x-velocities of projectiles.</p>
+            <p>Consider a ball kicked upward. Ignoring air resistance, the ball will have a constant acceleration of g=9.8m/s<sup>2</sup> downward from the moment it is kicked to the moment it is caught or lands on the ground.</p>
+            <div className="center">
+              <img src={freefallDiagram} width="70%"/>
+            </div>
           </div>
           <div className="col s12 m5 l5 center">
             {/* FREEFALL SIM */}
