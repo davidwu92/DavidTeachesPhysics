@@ -15,23 +15,29 @@ const Lesson1_1 = () => {
 
   return (
     <>
-      <button className="green btn right" onClick={()=>{history.push('/lesson1_2')}}>NEXT LESSON: 1.2 Intro to Kinematics</button>
-      <br/>
-      <div className="container">
-        <h3 className="center">Lesson 1.1: Physics as a Lab Science</h3>
-        <h6 style={{textIndent: "30px"}}>
-          Before studying E = mc<sup>2</sup> or even F = ma, we should probably talk about how the laws and constants used by physicists have developed over years of experimentation, hypothesis-testing, and lab work. Galileo didn't discover the moons of Jupiter in a day's worth of observations, you know!
-        </h6>
-        <h6>
-          <div className="purple-text grey lighten-4" style={{padding:"1px 2% 1px 2%"}}>
-            <h5>Lesson Contents</h5>
-            <div className="purple" style={{height: "1px"}}></div><br/>
-            <li><span onClick={()=>{document.getElementById("section1").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Accuracy vs. Precision</u></span></li><br/>
-            <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Vectors vs. Scalars</u></span></li><br/>
-          </div>
-        </h6>
+      <div className="indigo lighten-4" style={{marginBottom: "-7px", paddingBottom: "10px"}}>
+        <p className="black blue-text" style={{textIndent: "20px", margin: "0"}}>
+          <button className="btn-small btn-flat black blue-text" onClick={()=>{history.push('/classical-mechanics')}}>Unit 1: Classical Mechanics</button>
+          {`>`} <button className="btn-small btn-flat black blue-text" onClick={()=>{history.push('/kinematics')}}>1. Kinematics</button>
+          {`>`} <button className="btn-small btn-flat black blue-text">1.1 Physics as a Lab Science </button>
+        </p>
+        <button className="green btn right" onClick={()=>{history.push('/lesson1_2')}}>NEXT LESSON: 1.2 Intro to Kinematics</button>
+        <br/>
+        <div className="container">
+          <h3 className="center indigo-text text-darken-4">Lesson 1.1: Physics as a Lab Science</h3>
+          <h6 style={{textIndent: "30px"}}>
+            Before studying E = mc<sup>2</sup> or even F = ma, we should probably talk about how the laws and constants used by physicists have developed over years of experimentation, hypothesis-testing, and lab work.
+          </h6>
+          <h6>
+            <div className="indigo-text text-darken-4 grey lighten-3" style={{padding:"1px 2% 1px 2%"}}>
+              <h5>Lesson Contents</h5>
+              <div className="indigo darken-4" style={{height: "1px"}}></div><br/>
+              <li><span onClick={()=>{document.getElementById("section1").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Accuracy vs. Precision</u></span></li><br/>
+              <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Vectors vs. Scalars</u></span></li><br/>
+            </div>
+          </h6>
+        </div>
       </div>
-
       <div className="row">
         <div id="section1" className="green lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 1 ACCURACY VS. PRECISION */}
           <h4 className="green-text text-darken-3">Accuracy vs. Precision</h4>

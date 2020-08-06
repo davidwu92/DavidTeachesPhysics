@@ -14,30 +14,36 @@ const Lesson1_2 = () => {
 
   return (
     <>
-      <button className="green btn left" onClick={()=>{history.push('/lesson1_1')}}>PREVIOUS LESSON: 1.1 Physics as a Lab Science</button>
-      <button className="green btn right" onClick={()=>{history.push('/lesson1_3')}}>NEXT LESSON: 1.3 The Kinematics Equations</button>
-      <br/>
-      <div className="container">{/* INTRODUCING LESSON 1.2 */}
-        <h3 className="center">Lesson 1.2: Intro to Kinematics</h3>
-        <h6>
-          In layman's terms, kinematics is the study of <em>how</em> stuff moves; for the most part, we'll be ignoring <em>why</em> stuff moves. The quantities, skills, and concepts we'll study in this lesson are listed below.
-          <br/>
-          <br/>
-          <em>Keep in mind that full mastery of these concepts is an <b>absolute must</b> if you wish to have any hope of moving foward to the proceeding units!</em>
-          <br/>
-          <br/>
-          <div className="purple-text grey lighten-4" style={{padding:"1px 2% 1px 2%"}}>
-            <h5>Lesson Contents</h5>
-            <div className="purple" style={{height: "1px"}}></div><br/>
-            <li><span onClick={()=>{document.getElementById("section1").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Displacement</u></span></li><br/>
-            <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Velocity</u></span></li><br/>
-            <li><span onClick={()=>{document.getElementById("section3").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Acceleration</u></span></li><br/>
-            <li><span onClick={()=>{document.getElementById("section4").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Freefall and Acceleration due to Gravity</u></span></li><br/>
-            <li><span onClick={()=>{document.getElementById("section5").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Graphing Motion: <em>Δx</em>, <em>v</em>, and <em>a</em> as functions of time.</u></span></li><br/>
-          </div>
-        </h6>
+      <div className="indigo lighten-4" style={{marginBottom: "-7px", paddingBottom: "10px"}}>
+        <p className="black blue-text" style={{textIndent: "20px", margin: "0"}}>
+          <button className="btn-small btn-flat black blue-text" onClick={()=>{history.push('/classical-mechanics')}}>Unit 1: Classical Mechanics</button>
+          {`>`}<button className="btn-small btn-flat black blue-text" onClick={()=>{history.push('/kinematics')}}>1. Kinematics</button>
+          {`>`}<button className="btn-small btn-flat black blue-text">1.2 Intro to Kinematics</button>
+        </p>
+        <button className="green btn left" onClick={()=>{history.push('/lesson1_1')}}>PREVIOUS LESSON: 1.1 Physics as a Lab Science</button>
+        <button className="green btn right" onClick={()=>{history.push('/lesson1_3')}}>NEXT LESSON: 1.3 The Kinematics Equations</button>
+        <br/>
+        <div className="container">{/* INTRODUCING LESSON 1.2 */}
+          <h3 className="center indigo-text text-darken-4">Lesson 1.2: Intro to Kinematics</h3>
+          <h6>
+            In layman's terms, kinematics is the study of <em>how</em> stuff moves; for the most part, we'll be ignoring <em>why</em> stuff moves. The quantities, skills, and concepts we'll study in this lesson are listed below.
+            <br/>
+            <br/>
+            <em>Keep in mind that full mastery of these concepts is an <b>absolute must</b> if you wish to have any hope of moving foward to the proceeding units!</em>
+            <br/>
+            <br/>
+            <div className="indigo-text text-darken-4 grey lighten-3" style={{padding:"1px 2% 1px 2%"}}>
+              <h5>Lesson Contents</h5>
+              <div className="indigo darken-4" style={{height: "1px"}}></div><br/>
+              <li><span onClick={()=>{document.getElementById("section1").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Displacement</u></span></li><br/>
+              <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Velocity</u></span></li><br/>
+              <li><span onClick={()=>{document.getElementById("section3").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Acceleration</u></span></li><br/>
+              <li><span onClick={()=>{document.getElementById("section4").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Freefall and Acceleration due to Gravity</u></span></li><br/>
+              <li><span onClick={()=>{document.getElementById("section5").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Graphing Motion: <em>Δx</em>, <em>v</em>, and <em>a</em> as functions of time.</u></span></li><br/>
+            </div>
+          </h6>
+        </div>
       </div>
-
       <div id="section1" className="green lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 1 Δx*/}
         <h4 className="green-text text-darken-3">Displacement, the change in position</h4>
         <p style={{textIndent: "20px"}}><b>Displacement</b> is the vector equivalent of <b>distance</b>; both are measured in meters (m). While distance, <em>d</em>, represents how far meters an object has travelled (or how far apart two points are), displacement is defined as an object's <em>change in position</em>. If "x" represents where an object lies along a horizontal axis, we use Δx ("delta-x") to represent the <em>change in "x"</em> AKA the horizontal displacement. If an object's motion is two-dimensional, we need to use both horizontal and vertical displacements!</p>
@@ -413,7 +419,7 @@ const Lesson1_2 = () => {
             </div>
           </div>
           <div className="col s12 m5 l5 center">
-            <h5>1<em>D Acceleration</em> Simulator</h5>
+            <h6><em>1D Acceleration Simulator</em></h6>
             <iframe src="https://scratch.mit.edu/projects/415806627/embed" allowtransparency="true" width="499" height="402" frameborder="0" scrolling="no" allowfullscreen></iframe>
             <p><a target="_blank" href="https://scratch.mit.edu/projects/415806627">Direct Link to Scratch</a></p>
           </div>
