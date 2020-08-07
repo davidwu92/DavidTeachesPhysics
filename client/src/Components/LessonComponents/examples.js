@@ -20,9 +20,9 @@ const examples = () =>{
           <div className="card-content" style={{minHeight: "50vh"}}>
             <span className="card-title grey-text text-darken-4">Ex 1. Concept Name</span>
             <p style={{textIndent: "20px", fontWeight: "500"}}>Problem</p><br/>
-            <p style={{fontWeight: "500"}}>A. </p><br/>
-            <p style={{fontWeight: "500"}}>B. </p><br/>
-            <p style={{fontWeight: "500"}}>C. </p><br/>
+            <p><b>A.</b> </p><br/>
+            <p><b>B.</b> </p><br/>
+            <p><b>C.</b> </p><br/>
             <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
           </div>
           <div className="card-reveal">

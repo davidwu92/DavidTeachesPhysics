@@ -1,14 +1,15 @@
 //Pages/Lessons/Kinematics.js
 import React from 'react'
-// import { useHistory } from 'react-router-dom'
 //https://github.com/talyssonoc/react-katex
 import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
+import { useHistory } from 'react-router-dom'
+
 import joeDisplacement from './joeDisplacement.png'
 import sueDisplacement from './sueDisplacement.png'
 import annieVelocity from './annieVelocity.png'
 import freefallDiagram from './freefallDiagram.png'
-import { useHistory } from 'react-router-dom'
+import freefallLauncher from './freefallLauncher.png'
 
 const Lesson1_2 = () => {
   const history = useHistory()
@@ -16,7 +17,7 @@ const Lesson1_2 = () => {
   return (
     <>
       <div className="indigo lighten-4" style={{marginBottom: "-7px", paddingBottom: "10px"}}>
-        <p className="black blue-text" style={{textIndent: "20px", margin: "0"}}>
+        <p className="black blue-text" style={{textIndent: "1.2em", margin: "0"}}>
           <button className="btn-small btn-flat black blue-text" onClick={()=>{history.push('/classical-mechanics')}}>Unit 1: Classical Mechanics</button>
           {`>`}<button className="btn-small btn-flat black blue-text" onClick={()=>{history.push('/kinematics')}}>1. Kinematics</button>
           {`>`}<button className="btn-small btn-flat black blue-text">1.2 Intro to Kinematics</button>
@@ -47,7 +48,7 @@ const Lesson1_2 = () => {
       </div>
       <div id="section1" className="green lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 1 Δx*/}
         <h4 className="green-text text-darken-3">Displacement, the change in position</h4>
-        <p style={{textIndent: "20px"}}><b>Displacement</b> is the vector equivalent of <b>distance</b>; both are measured in meters (m). While distance, <em>d</em>, represents how far meters an object has travelled (or how far apart two points are), displacement is defined as an object's <em>change in position</em>. If "x" represents where an object lies along a horizontal axis, we use Δx ("delta-x") to represent the <em>change in "x"</em> AKA the horizontal displacement. If an object's motion is two-dimensional, we need to use both horizontal and vertical displacements!</p>
+        <p style={{textIndent: "1.2em"}}><b>Displacement</b> is the vector equivalent of <b>distance</b>; both are measured in meters (m). While distance, <em>d</em>, represents how far meters an object has travelled (or how far apart two points are), displacement is defined as an object's <em>change in position</em>. If "x" represents where an object lies along a horizontal axis, we use Δx ("delta-x") to represent the <em>change in "x"</em> AKA the horizontal displacement. If an object's motion is two-dimensional, we need to use both horizontal and vertical displacements!</p>
         <p className="center"><em>We'll be describing displacement using symbols like Δx, Δy, r, and θ. Their explanations are color-coded to match the displacement simulator on the right, so make sure to try it out!</em></p>
 
         <div className="row">{/* DISPLACEMENT CONTENT */}
@@ -59,7 +60,7 @@ const Lesson1_2 = () => {
                 <h6 className="center blue-text text-darken-1"><InlineMath>{String.raw`Δy=y_f - y_i`}</InlineMath></h6>
               </div>
               <div className="col s6 m6 l6">
-                <p style={{textIndent: "20px"}}>Here, <em>x<sub>i</sub></em> and <em>x<sub>f</sub></em> represent the initial and final x-positions, measured from the origin (usually). Delta (Δ) is the "change in" some value, and that change is found by subtracting the final - initial.</p>
+                <p style={{textIndent: "1.2em"}}>Here, <em>x<sub>i</sub></em> and <em>x<sub>f</sub></em> represent the initial and final x-positions, measured from the origin (usually). Delta (Δ) is the "change in" some value, and that change is found by subtracting the final - initial.</p>
               </div>
 
               <div className="col s12 m12 l12 green darken-4"></div>
@@ -68,12 +69,12 @@ const Lesson1_2 = () => {
                 <h6 className="center green-text text-darken-1"><InlineMath>{String.raw`θ=\arctan\frac{Δy}{Δx} = \tan^{-1}\frac{Δy}{Δx}`}</InlineMath></h6>
               </div>
               <div className="col s6 m6 l6">
-                <p style={{textIndent: "20px"}}>We might also care about the displacement vector's angle above or below the horizontal, <em>θ</em> ("Theta").</p>
+                <p style={{textIndent: "1.2em"}}>We might also care about the displacement vector's angle above or below the horizontal, <em>θ</em> ("Theta").</p>
               </div>
               <div className="col s12 m12 l12">
                 <h5>Describing position with <em>r</em></h5>
-                <p style={{textIndent: "20px"}}>The rectangular coordinate system uses horizontal and vertical positions (along the x and y axes) to describe where points are in space. It is often more useful to use distance and direction to describe positions (since they're vectors, aren't they?). Hence, we use r and θ, where r is the distance from the origin and θ is the polar angle (angle above the horizontal).</p>
-                <p style={{textIndent: "20px"}}><b>Position vector <InlineMath>{String.raw`\vec{r}`}</InlineMath> is drawn between starting and final positions of an object, and has a magnitude <em>r</em> equal to the distance <em>d</em> between the two points!</b></p>
+                <p style={{textIndent: "1.2em"}}>The rectangular coordinate system uses horizontal and vertical positions (along the x and y axes) to describe where points are in space. It is often more useful to use distance and direction to describe positions (since they're vectors, aren't they?). Hence, we use r and θ, where r is the distance from the origin and θ is the polar angle (angle above the horizontal).</p>
+                <p style={{textIndent: "1.2em"}}><b>Position vector <InlineMath>{String.raw`\vec{r}`}</InlineMath> is drawn between starting and final positions of an object, and has a magnitude <em>r</em> equal to the distance <em>d</em> between the two points!</b></p>
                 <div className="col s12 m6 l6">
                   <h6 className="center purple-text text-darken-1"><InlineMath>{String.raw`r = |\vec{r}| = d = \sqrt{(Δx)^2+(Δy)^2}`}</InlineMath></h6>
                 </div>
@@ -110,9 +111,9 @@ const Lesson1_2 = () => {
               <div className="card"> 
                 <div className="card-content" style={{minHeight: "50vh"}}>
                   <span className="card-title grey-text text-darken-4">Ex 1. Trig and Vector Components</span>
-                  <p style={{textIndent: "20px", fontWeight: "500"}}>Sue uses a 2.30-meter wooden plank to play with her toy cars. The ramp descends with an angle of 25 degrees below the horizontal, and Sue happily rolls her cars down from the top of the ramp.</p><br/>
-                  <p style={{fontWeight: "500"}}>A. Find Δx and Δy for the cars as they move down the ramp.</p> <br/>
-                  <p style={{fontWeight: "500"}}>B. Sue moves her wooden plank to a new position, such that the top side of the ramp has a height of 0.45 meters. Find the new angle of descent, as well as Δx for cars moving down this ramp.</p><br/>
+                  <p style={{textIndent: "1.2em", fontWeight: "500"}}>Sue uses a 2.30-meter wooden plank to play with her toy cars. The ramp descends with an angle of 25 degrees below the horizontal, and Sue happily rolls her cars down from the top of the ramp.</p><br/>
+                  <p><b>A.</b> Find Δx and Δy for the cars as they move down the ramp.</p> <br/>
+                  <p><b>B.</b> Sue moves her wooden plank to a new position, such that the top side of the ramp has a height of 0.45 meters. Find the new angle of descent, as well as Δx for cars moving down this ramp.</p><br/>
                   <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                 </div>
                 <div className="card-reveal">
@@ -134,25 +135,25 @@ const Lesson1_2 = () => {
                     <br/>
                     <br/>
                     <p><b>B. Using arcsine for θ...</b></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\sin{\theta}=\frac{Δy}{d}`}</InlineMath></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{Δy}{d}}`}</InlineMath></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{0.45}{2.3}}`}</InlineMath></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`\theta = 11.3^{\circ}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\sin{\theta}=\frac{Δy}{d}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{Δy}{d}}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\theta = \sin^{-1}{\frac{0.45}{2.3}}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\theta = 11.3^{\circ}`}</InlineMath></p>
                     <p><b>...and the Pythagorean Theorem...</b></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`(Δx)^2 + (Δy)^2 = d^2`}</InlineMath></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`Δx = \sqrt{d^2 - (Δy)^2}`}</InlineMath></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`Δx = \sqrt{(2.3)^2 - (0.45)^2}`}</InlineMath></p>
-                    <p style={{textIndent: "20px"}}><InlineMath>{String.raw`Δx = 2.26m`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`(Δx)^2 + (Δy)^2 = d^2`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`Δx = \sqrt{d^2 - (Δy)^2}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`Δx = \sqrt{(2.3)^2 - (0.45)^2}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`Δx = 2.26m`}</InlineMath></p>
                   </div>
                   <div className="col s6 m6 l6">
                     <img src={sueDisplacement} width="100%"/>
                   </div>
                   <div className="col s12 m12 l12">
                     <p>It's not a terrible idea to use cosine or tangent functions to find Δx. However, I believe it is better to <em>use given values whenever possible</em>, since we could've mistakenly calculated θ. So let's just check and see if our values for θ and Δx make sense!</p>
-                    <p style={{textIndent: "30px"}}><InlineMath>{String.raw`\tan{\theta} \stackrel{?}{=} \frac{Δy}{Δx}`}</InlineMath></p>
-                    <p style={{textIndent: "30px"}}><InlineMath>{String.raw`\tan{11.3^{\circ}} \stackrel{?}{=} \frac{0.45}{2.26}`}</InlineMath></p>
-                    <p style={{textIndent: "30px"}}><InlineMath>{String.raw`\tan{11.3^{\circ}} \stackrel{?}{=} \frac{0.45}{2.26}`}</InlineMath></p>
-                    <p style={{textIndent: "30px"}}><InlineMath>{String.raw`0.20 = 0.20`}</InlineMath><i class="material-icons">check</i></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\tan{\theta} \stackrel{?}{=} \frac{Δy}{Δx}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\tan{11.3^{\circ}} \stackrel{?}{=} \frac{0.45}{2.26}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`\tan{11.3^{\circ}} \stackrel{?}{=} \frac{0.45}{2.26}`}</InlineMath></p>
+                    <p style={{textIndent: "1.2em"}}><InlineMath>{String.raw`0.20 = 0.20`}</InlineMath><i class="material-icons">check</i></p>
                   </div>
                 </div>
               </div>
@@ -161,11 +162,11 @@ const Lesson1_2 = () => {
               <div className="card">
                 <div className="card-content" style={{minHeight: "50vh"}}>
                   <span className="card-title grey-text text-darken-4">Ex 2. Finding Total Displacement using Components</span>
-                  <p style={{textIndent: "20px", fontWeight: "500"}}>Joe takes a walk from his house. He walks 20 meters North, then turns 30 degrees right and walks 40 more meters forward.</p>
+                  <p style={{textIndent: "1.2em", fontWeight: "500"}}>Joe takes a walk from his house. He walks 20 meters North, then turns 30 degrees right and walks 40 more meters forward.</p>
                   <p><em>Note: That second bit of walking can be expressed using a <b>bearing</b>: N30<sup>o</sup>E, which reads "30 degrees East of North".</em></p><br/>
-                  <p style={{fontWeight: "500"}}>A. Find the x- and y-components of Joe's displacement, Δx and Δy.</p> <br/>
-                  <p style={{fontWeight: "500"}}>B. Find <InlineMath>{String.raw`|\vec{r}|`}</InlineMath>. In other words, how far is he from his house?</p><br/>
-                  <p style={{fontWeight: "500"}}>C. How is that value different from the total amount he walked?</p><br/>
+                  <p><b>A.</b> Find the x- and y-components of Joe's displacement, Δx and Δy.</p> <br/>
+                  <p><b>B.</b> Find <InlineMath>{String.raw`|\vec{r}|`}</InlineMath>. In other words, how far is he from his house?</p><br/>
+                  <p><b>C.</b> How is that value different from the total amount he walked?</p><br/>
                   <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                 </div>
                 <div className="card-reveal">
@@ -276,7 +277,7 @@ const Lesson1_2 = () => {
             <div className="row">
               <div className="col s1 m2 l2"></div>
               <div className="col s10 m8 l8">
-                <p style={{textIndent: "20px"}}>Consider a 6-hour car trip from Los Angeles to San Francisco (about 400 miles). The average velocity of the car trip would be around 67 mph North, but the instantaneous velocity of the car at any given point would fluctuate depending on traffic, rest stops, etc. One would need access to the car's speedometer to know its instantaneous velocity at any particular point along the way!</p>
+                <p style={{textIndent: "1.2em"}}>Consider a 6-hour car trip from Los Angeles to San Francisco (about 400 miles). The average velocity of the car trip would be around 67 mph North, but the instantaneous velocity of the car at any given point would fluctuate depending on traffic, rest stops, etc. One would need access to the car's speedometer to know its instantaneous velocity at any particular point along the way!</p>
               </div>
               <div className="col s1 m2 l2"></div>
             </div>
@@ -288,10 +289,10 @@ const Lesson1_2 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 3. Average vs. Instantaneous Velocity</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>Tessa prepares to run around a circular track with a 500m radius. Starting at the Southmost point on the track, she runs counterclockwise at a constant speed around the track in 745 seconds, stopping in the same position where she started her run.</p><br/>
-                <p style={{fontWeight: "500"}}>A. How much distance did Tessa cover? How fast was she running?</p> <br/>
-                <p style={{fontWeight: "500"}}>B. What's Tessa's displacement? What's her average velocity?</p><br/>
-                <p style={{fontWeight: "500"}}>C. Find Tessa's instantaneous velocities at t=0s and at t=478s. How are they different?</p><br/>
+                <p style={{textIndent: "1.2em", fontWeight: "500"}}>Tessa prepares to run around a circular track with a 500m radius. Starting at the Southmost point on the track, she runs counterclockwise at a constant speed around the track in 745 seconds, stopping in the same position where she started her run.</p><br/>
+                <p><b>A.</b> How much distance did Tessa cover? How fast was she running?</p> <br/>
+                <p><b>B.</b> What's Tessa's displacement? What's her average velocity?</p><br/>
+                <p><b>C.</b> Find Tessa's instantaneous velocities at t=0s and at t=478s. How are they different?</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
@@ -312,10 +313,10 @@ const Lesson1_2 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 4. Calculating Average Velocity</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>Annie hops in her car and drives 1.8 km due East in 1 minute, then turns left and goes 3.5 km due North in 2 minutes.</p><br/>
-                <p style={{fontWeight: "500"}}>A. Find the magnitude of her average velocity in meters per second.</p> <br/>
-                <p style={{fontWeight: "500"}}>B. Find the angle above the horizontal, θ, of her velocity vector.</p><br/>
-                <p style={{fontWeight: "500"}}>C. Tom asks you to look over his solution. What's wrong with it?</p><br/>
+                <p style={{textIndent: "1.2em", fontWeight: "500"}}>Annie hops in her car and drives 1.8 km due East in 1 minute, then turns left and goes 3.5 km due North in 2 minutes.</p><br/>
+                <p><b>A.</b> Find the magnitude of her average velocity in meters per second.</p> <br/>
+                <p><b>B.</b> Find the angle above the horizontal, θ, of her velocity vector.</p><br/>
+                <p><b>C.</b> Tom asks you to look over his solution. What's wrong with it?</p><br/>
                 <div style={{width: "80%", marginLeft: "25px"}}>
                   <span className="left"><InlineMath>{String.raw`v_x = \frac{1.8km}{1min} = 30m/s`}</InlineMath></span>
                   <span  className="right"><InlineMath>{String.raw`v_y = \frac{3.5km}{2min} = 29.2m/s`}</InlineMath></span>
@@ -362,7 +363,7 @@ const Lesson1_2 = () => {
               <div className="card"> 
                 <div className="card-content" style={{minHeight: "50vh"}}>
                   <span className="card-title grey-text text-darken-4">Ex 5. More Velocity Vector Practice</span>
-                  <p style={{textIndent: "20px", fontWeight: "500"}}></p><br/>
+                  <p style={{textIndent: "1.2em", fontWeight: "500"}}></p><br/>
                   <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                 </div>
                 <div className="card-reveal">
@@ -375,7 +376,7 @@ const Lesson1_2 = () => {
               <div className="card"> 
                 <div className="card-content" style={{minHeight: "50vh"}}>
                   <span className="card-title grey-text text-darken-4">Ex 6. Graphing Displacement and Velocity</span>
-                  <p style={{textIndent: "20px", fontWeight: "500"}}></p><br/>
+                  <p style={{textIndent: "1.2em", fontWeight: "500"}}></p><br/>
                   <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                 </div>
                 <div className="card-reveal">
@@ -431,11 +432,11 @@ const Lesson1_2 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 7. Calculating Acceleration with v<sub>i</sub> and v<sub>f</sub></span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>At t=0s, a car moving at 20m/s speeds up uniformly and reaches a speed of 35m/s after 4 seconds. After cruising at 35m/s for 5 seconds, the driver applies on the brakes, causing the car to come to a stop over 2 seconds.</p><br/>
-                <p style={{fontWeight: "500"}}>A. When is the car's acceleration positive? Negative? Zero?</p><br/>
-                <p style={{fontWeight: "500"}}>B. Find the car's acceleration and average velocity between t=0s and t=4s.</p><br/>
-                <p style={{fontWeight: "500"}}>C. Find the car's acceleration and average velocity between t=9s and t=11s.</p><br/>
-                <p style={{fontWeight: "500"}}>C. Find the car's acceleration between t=0s and t=11s.</p><br/>
+                <p style={{textIndent: "1.2em", fontWeight: "500"}}>At t=0s, a car moving at 20m/s speeds up uniformly and reaches a speed of 35m/s after 4 seconds. After cruising at 35m/s for 5 seconds, the driver applies on the brakes, causing the car to come to a stop over 2 seconds.</p><br/>
+                <p><b>A.</b> When is the car's acceleration positive? Negative? Zero?</p><br/>
+                <p><b>B.</b> Find the car's acceleration and average velocity between t=0s and t=4s.</p><br/>
+                <p><b>C.</b> Find the car's acceleration and average velocity between t=9s and t=11s.</p><br/>
+                <p><b>C.</b> Find the car's acceleration between t=0s and t=11s.</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
@@ -448,10 +449,10 @@ const Lesson1_2 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 8. Finding <em>v<sub>f</sub></em> given acceleration and time</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>A space ship is travelling forward in the x-direction at <InlineMath>{String.raw`\vec{v_i} = 200m/s`}</InlineMath>. Starting at time t=0 seconds, its thrusters are applied for 30 seconds, giving it an acceleration of 10m/s<sup>2</sup>. Find its velocity at t=30s if...</p><br/>
-                <p style={{fontWeight: "500"}}>A. ...the thrusters pushed the ship in the same direction as <InlineMath>{String.raw`\vec{v_i}`}</InlineMath> (positive-x direction).</p><br/>
-                <p style={{fontWeight: "500"}}>B. ...the thrusters pushed in the opposite direction of <InlineMath>{String.raw`\vec{v_i}`}</InlineMath> (negative-x direction).</p><br/>
-                <p style={{fontWeight: "500"}}>C. ...the thrusters pushed in the positive-y direction, perpendicular to <InlineMath>{String.raw`\vec{v_i}`}</InlineMath>.</p><br/>
+                <p style={{textIndent: "1.2em", fontWeight: "500"}}>A space ship is travelling forward in the x-direction at <InlineMath>{String.raw`\vec{v_i} = 200m/s`}</InlineMath>. Starting at time t=0 seconds, its thrusters are applied for 30 seconds, giving it an acceleration of 10m/s<sup>2</sup>. Find its velocity at t=30s if...</p><br/>
+                <p><b>A.</b> ...the thrusters pushed the ship in the same direction as <InlineMath>{String.raw`\vec{v_i}`}</InlineMath> (positive-x direction).</p><br/>
+                <p><b>B.</b> ...the thrusters pushed in the opposite direction of <InlineMath>{String.raw`\vec{v_i}`}</InlineMath> (negative-x direction).</p><br/>
+                <p><b>C.</b> ...the thrusters pushed in the positive-y direction, perpendicular to <InlineMath>{String.raw`\vec{v_i}`}</InlineMath>.</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
@@ -518,10 +519,10 @@ const Lesson1_2 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 9. 1D Uniform Acceleration</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>Jill starts at the top of a long, straight slide with initial speed of 0.56 m/s. She accelerates uniformly down the slide at 2.7 m/s<sup>2</sup>, and reaches the end of the slide in 3.2 seconds.</p><br/>
-                <p style={{fontWeight: "500"}}>A. What's Jill's velocity at the end of the slide? What's her velocity halfway through her ride?</p><br/>
-                <p style={{fontWeight: "500"}}>B. What's Jill's average velocity on the slide?</p><br/>
-                <p style={{fontWeight: "500"}}>C. How long is the slide?</p><br/>
+                <p style={{textIndent: "1.2em", fontWeight: "500"}}>Jill starts at the top of a long, straight slide with initial speed of 0.56 m/s. She accelerates uniformly down the slide at 2.7 m/s<sup>2</sup>, and reaches the end of the slide in 3.2 seconds.</p><br/>
+                <p><b>A.</b> What's Jill's velocity at the end of the slide? What's her velocity halfway through her ride?</p><br/>
+                <p><b>B.</b> What's Jill's average velocity on the slide?</p><br/>
+                <p><b>C.</b> How long is the slide?</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
@@ -550,10 +551,10 @@ const Lesson1_2 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 10. Finding <em>t</em> given acceleration and <em>Δv</em></span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>A particular train has emergency brakes that cause the train to decelerate at 10 m/s<sup>2</sup>.</p><br/>
-                <p style={{fontWeight: "500"}}>A. If the train is travelling at 50 m/s, how long does it take to stop?</p><br/>
-                <p style={{fontWeight: "500"}}>B. If its initial velocity is 100 m/s, how long does it take to stop?</p><br/>
-                <p style={{fontWeight: "500"}}>C. For A and B, find the average velocity of the train for the duration of its braking. Then find the braking distance (distance travelled in that time).</p><br/>
+                <p style={{textIndent: "1.2em", fontWeight: "700"}}>A particular train has brakes that cause the train to decelerate at 10 m/s<sup>2</sup>.</p><br/>
+                <p><b>A. </b>If the train is travelling at 50 m/s, how long does it take to stop?</p><br/>
+                <p><b>B. </b>If its initial velocity is 100 m/s, how long does it take to stop?</p><br/>
+                <p><b>C. </b>For A and B, find the average velocity of the train for the duration of its braking. Then find the braking distance (distance travelled in that time).</p><br/>
                 <em>Note: "Decelerate", in English, is the opposite of accelerate. We don't love this word in physics; it's more appropriate to say the train accelerates at 10m/s<sup>2</sup> in the negative direction.</em>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
@@ -590,26 +591,251 @@ const Lesson1_2 = () => {
         </div>
       </div>{/* End of Acceleration */}
 
-      <div id="section4" className="blue lighten-5" style={{padding:"1vh 6vw"}}>
-        <h4 className="blue-text text-darken-3">Freefall and Acceleration due to Gravity</h4>
-        <p style={{textIndent: "30px"}}>Like all massive celestial objects, the Earth has a significant gravitational field that pulls in objects that have mass. On Earth's surface, this pull causes falling objects to accelerate toward the center of Earth at a rate of 9.8 m/s<sup>2</sup> (ignoring air resistance); this number decreases the futher we get from Earth's pull. We call this value the <b>acceleration due to gravity, g</b>. While g = 9.8 m/s<sup>2</sup> on the surface of Earth, g may be different on other planets and at different altitudes (but you'd have to be really, really high up for g to be significantly less than 9.8m/s<sup>2</sup>!)</p>
+      <div id="section4" className="blue lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 4 Freefall */}
+        <h4 className="blue-text text-darken-3">Freefall and Acceleration due to Gravity, g</h4>
+        <p style={{textIndent: "1.2em"}}>Like all massive celestial objects, the Earth has a significant gravitational field that pulls in objects that have mass. On Earth's surface, this pull causes falling objects to accelerate toward the center of Earth at a rate of 9.8 m/s<sup>2</sup> (ignoring air resistance); this number decreases the futher we get from Earth's pull. We call this value the <b>acceleration due to gravity, g</b>. While g = 9.8 m/s<sup>2</sup> on the surface of Earth, g may be different on other planets and at different altitudes (but you'd have to be really, really high up for g to be significantly less than 9.8m/s<sup>2</sup>!)</p>
+        <p style={{textIndent: "1.2em"}}>An object is in <b>freefall</b> as long as gravity is the sole force acting on it. While we haven't talked about forces formally yet, assume that just about any object that's falling or flying through the air will be considered "in freefall"; this assumption is fine as long as air resistance is negligible and our objects aren't birds, planes, parachutes... etc.</p>
         <div className="row"> {/* FREEFALL CONTENT */}
           <div className="col s12 m7 l7">
-            <p>Consider a ball kicked upward. Ignoring air resistance, the ball will have a constant acceleration of g=9.8m/s<sup>2</sup> downward from the moment it is kicked to the moment it is caught or lands on the ground.</p>
+            <p><em>Consider this ball's flight after being kicked upward. The ball will have a constant acceleration of g=9.8m/s<sup>2</sup> downward for its entire flight. During its flight, the ball is "in freefall", even while its v<sub>y</sub> is positive!</em></p>
             <div className="center">
               <img src={freefallDiagram} width="70%"/>
             </div>
           </div>
           <div className="col s12 m5 l5 center">
             {/* FREEFALL SIM */}
+            <h6><em>Projectile Motion Simulator</em></h6>
             <iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html" width="500vw" height="375vw" scrolling="no" allowfullscreen></iframe>
             <p>Direct link <a target="_blank" href="https://phet.colorado.edu/en/simulation/projectile-motion">Phet Simulation: Projectile Motion</a></p>
           </div>
         </div>
         
-        <h1 className="grey-text center grey lighten-2">diagrams and practice</h1>
-      </div>{/* END OF ACCURACY/PRECISION */}        
-        
+        <div className="amber darken-1 row"> {/* FREEFALL EXAMPLES */}
+          <h5 className="center white-text">Freefall: Example Problems and Solutions</h5>
+          <div className="col s12 m6 l6">{/* EX 11 Freefall Calculations */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>{/* EX11 PROBLEM */}
+                <span className="card-title grey-text text-darken-4">Ex 11. Horizontal Launches and Dropped Objects</span>
+                <div className="col s12 m6 l6">
+                  <img src={freefallLauncher} width="95%"/>
+                  <p><em>Four balls launched from the same height. Air resistance is negligible.</em></p>
+                </div>
+                <div className="col s12 m6 l6">
+                  <p style={{textIndent: "1.2em", fontWeight: "500"}}>Four different balls are launched horizontally at speeds: <span className="green-text">0m/s</span>, <span className="red-text">5m/s</span>, <span className="blue-text">10m/s</span>, and <span className="purple-text">15m/s</span>.</p><br/>
+                  <p style={{fontWeight: "500", textIndent: "-1.2em"}}><b>A. </b>Show that each ball has the same <em>v<sub>y</sub></em>, one second after launch.</p><br/>
+                  <p style={{fontWeight: "500", textIndent: "-1.2em"}}><b>B. </b>What are the final velocities of each ball when they hit the ground at <em>t</em>=1.53s?</p><br/>
+                </div>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">{/* EX11 SOLUTION */}
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                <div className="col s12 m5 l5">
+                  <p>Each ball is launched <em>horizontally</em>, so <InlineMath>{String.raw`v_{oy}=0m/s`}</InlineMath> for each ball. They all have the same downward acceleration due to gravity, g=9.8m/s<sup>2</sup>.</p>
+                </div>
+                <div className="col s12 m7 l7">
+                  <img src={freefallLauncher} width="100%"/>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <div className="col s6 m5 l5">
+                  <p><b>A. <InlineMath>{String.raw`v_{fy} = v_{oy} + a_yt`}</InlineMath></b></p>
+                  <p style={{textIndent: "1.2em"}}><b><InlineMath>{String.raw`v_{fy}  = 0m/s + (9.8m/s^2)(1s)`}</InlineMath></b></p>
+                  <p style={{textIndent: "1.2em"}}><b><InlineMath>{String.raw`v_{fy}  = -9.8m/s`}</InlineMath></b></p>
+                </div>
+                <div className="col s6 m7 l7 center">
+                  <p>Every ball's y-velocity changes by 9.8 m/s each second they fall.</p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <div className="col s12 m6 l6">
+                  <p><b>B. </b>Each ball hits the ground with the same <em>v<sub>y</sub></em>, at the same time <em>t</em>=1.53s.</p>
+                  <p><InlineMath>{String.raw`v_{fy} = v_{oy} + a_yt`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy} = 0m/s + (-9.8m/s^2)(1.53s)`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy} = -15m/s`}</InlineMath></p>
+                </div>
+                <div className="col s12 m6 l6">
+                  <p>Meanwhile, their <em>v<sub>x</sub></em>'s don't change as they fall since <InlineMath>{String.raw`\vec{a}`}</InlineMath> points <em>down</em>.</p>
+                  <p><InlineMath>{String.raw`v_{fx} = v_{ox} + a_xt`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fx} = v_{ox} + (0m/s^2)(1.53s)`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fx} = v_{ox}`}</InlineMath></p>
+                </div>
+                <div className="col s12 m12 l12">
+                  <p>So we already know each ball's final velocities in the form of x- and y- components.</p>
+                  <p>Find each <em>v<sub>f</sub></em> using the Pythagorean Theorem, and use arctan to find the angle below the horizontal for each ball.</p>
+                  <table className="centered">
+                    <thead>
+                      <tr>
+                          <th>Color</th>
+                          <th><em>v<sub>ox</sub></em> and <em>v<sub>fx</sub></em></th>
+                          <th><em>v<sub>fy</sub></em></th>
+                          <th>Final Speed <em>v<sub>f</sub></em></th>
+                          <th>θ (below horizontal)</th>
+                      </tr>
+                    </thead>
+
+                    <tbody style={{fontWeight: "600"}}>
+                      <tr className="green-text">
+                        <td>GREEN</td>
+                        <td>0m/s</td>
+                        <td>-15m/s</td>
+                        <td>15m/s</td>
+                        <td>90<sup>o</sup></td>
+                      </tr>
+                      <tr className="red-text">
+                        <td>RED</td>
+                        <td>5m/s</td>
+                        <td>-15m/s</td>
+                        <td>25.5m/s</td>
+                        <td>71.6<sup>o</sup></td>
+                      </tr>
+                      <tr className="blue-text">
+                        <td>BLUE</td>
+                        <td>10m/s</td>
+                        <td>-15m/s</td>
+                        <td>26.9m/s</td>
+                        <td>56.3<sup>o</sup></td>
+                      </tr>
+                      <tr className="purple-text">
+                        <td>PURPLE</td>
+                        <td>15m/s</td>
+                        <td>-15m/s</td>
+                        <td>29.2m/s</td>
+                        <td>45<sup>o</sup></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col s12 m6 l6">{/* EX 12 Vertical Launch */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 12. Vertical Launches</span>
+                <p><b>Superman launches a ball upward with initial velocity 98 m/s.</b></p><br/>
+                <p><b>A.</b> How long does it take for the ball to reach the apex (the highest point) of its flight?</p><br/>
+                <p><b>B.</b> At what times does the ball have speed 49 m/s?</p><br/>
+                <p><b>C.</b> When does the ball reach the same height from which it was launched?</p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">{/* EX12 SOLUTION */}
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                <div className="col s12 m12 l12">
+                  <p>For part A: at the apex of its flight, the ball has <InlineMath>{String.raw`v_y=0m/s`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_f = v_o + at`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`0m/s = 98m/s + (-9.8m/s^2)t`}</InlineMath></p>
+                  <p><b>A. </b> The ball reaches the top at <InlineMath>{String.raw`t = 10s`}</InlineMath></p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <div className="col s12 m12 l12">
+                  <p>The same formula will find us the times when the ball's speed is 49 m/s for Part B; note that there should be two times it has this speed: positive and negative <em>v<sub>y</sub></em>'s.</p>
+                </div>
+                <div className="col s12 m6 l6">
+                  <p><InlineMath>{String.raw`49m/s = 98m/s + (-9.8m/s^2)t`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`t = 5s`}</InlineMath></p>
+                </div>
+                <div className="col s12 m6 l6">
+                  <p><InlineMath>{String.raw`-49m/s = 98m/s + (-9.8m/s^2)t`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`t = 15s`}</InlineMath></p>
+                </div>
+                <div className="col s12 m12 l12">
+                  <p><b>B. </b>the ball's speed is 49m/s at t=5s (on the way up) and at 15s (on the way down).</p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <div className="col s12 m12 l12">
+                  <p><b>C. </b>The ball falls back down to its initial launch position after 20 seconds.</p>
+                  <p>You could've gotten this with the same formula from A and B (with <em>v<sub>f</sub></em>= -98m/s); or you could use the symmetry of parabolas to note that the time it takes to get to the apex is the same as the time it takes to fall back down!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col s12 m12 l12"></div>
+          <div className="col s12 m6 l6">{/* EX 13 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 13. Finding a Formula: Δy for Dropped Objects</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>Bill drops an anvil. Follow the steps below to derive a formula for the anvil's Δy in terms of <em>g</em> and <em>t</em>! I recommend using absolutely zero numbers (don't sub in 9.8m/s<sup>2</sup>!)</p><br/>
+                <p><b>A.</b> Find the anvil's speed after <em>t</em> seconds.</p><br/>
+                <p><b>B.</b> Find the anvil's average speed during those <em>t</em> seconds.</p><br/>
+                <p><b>C.</b> How far does the anvil fall in those <em>t</em> seconds?</p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                <p>Starting with... <InlineMath>{String.raw`v_f = v_o + at`}</InlineMath></p>
+                <p>When something is "dropped", we imply that it has v<sub>oy</sub> is 0 m/s (Bill's not throwing it up or down).</p>
+                <p><b>A.</b> <InlineMath>{String.raw`v_f = gt`}</InlineMath></p>
+                <p>The average velocity is found with: <InlineMath>{String.raw`v_{avg} = (v_o + v_f)/2`}</InlineMath></p>
+                <p><b>B.</b> <InlineMath>{String.raw`v_{avg} = v_f/2 = (gt)/2 = \frac{1}{2}gt`}</InlineMath></p>
+                <p>Displacement can be found with <InlineMath>{String.raw`Δy = v_{avg}t`}</InlineMath></p>
+                <p><b>C.</b> <InlineMath>{String.raw`Δy = (\frac{1}{2}gt)t = \frac{1}{2}gt^2`}</InlineMath></p>
+                <p>And that's it; we've found the y-displacement as a function of time!</p>
+              </div>
+            </div>
+          </div>
+          <div className="col s12 m6 l6">{/* EX 14 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 14. Concept Name</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>Problem</p><br/>
+                <p><b>A.</b> </p><br/>
+                <p><b>B.</b> </p><br/>
+                <p><b>C.</b> </p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>       
+      
+      <div id="section5" className="green lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 5 Motion Graphs */}
+        <h4 className="green-text text-darken-3">Graphing Position, Velocity, and Acceleration as Functions of Time</h4>
+        <p style={{textIndent:"1.8em"}}>In mathematics, a function <InlineMath>f(x)</InlineMath> is defined as a relationship between two (or more) variables, where each input <InlineMath>x</InlineMath> has no more than one output <InlineMath>f(x)</InlineMath>.</p>
+        <p style={{textIndent:"1.8em"}}>In physics, an object's horizontal position is indeed a function of time: <InlineMath>x(t)</InlineMath>. At any particular time, it can only have one position along the x-axis! The same is true for vertical position, velocity, and acceleration; these values may vary over time, but it wouldn't make sense for an object to have two different velocities at once.</p>
+        <p>We'll spend this section learning about how to graph these three functions: <InlineMath>x(t)</InlineMath> or <InlineMath>y(t)</InlineMath>, <InlineMath>v(t)</InlineMath>,  and <InlineMath>a(t)</InlineMath>.</p>
+        <div className="row"> {/* MOTION GRAPH CONTENT */}
+
+        </div>
+        <div className="amber darken-1 row">{/* MOTION GRAPH EXAMPLES */}
+          <h5 className="center white-text">Motion Graphs: Example Problems and Solutions</h5>
+          <div className="col s12 m6 l6">{/* EX 15 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 15. Concept Name</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>Problem</p><br/>
+                <p><b>A.</b> </p><br/>
+                <p><b>B.</b> </p><br/>
+                <p><b>C.</b> </p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+          <div className="col s12 m6 l6">{/* EX 16 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 16. Concept Name</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>Problem</p><br/>
+                <p><b>A.</b> </p><br/>
+                <p><b>B.</b> </p><br/>
+                <p><b>C.</b> </p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </>
   )
 }

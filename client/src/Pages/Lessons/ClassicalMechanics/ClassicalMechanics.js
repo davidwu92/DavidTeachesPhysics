@@ -19,6 +19,9 @@ const ClassicalMechanics = () => {
         <br/>
         <br/>
         <button className="blue btn-small" onClick={()=>{history.push('/lesson1_2')}}>Lesson 1.2: Intro to Kinematics</button>
+        <br/>
+        <br/>
+        <button className="blue btn-small" onClick={()=>{history.push('/lesson1_3')}}>Lesson 1.3: Kinematics Equations in 1D</button>
       </div>
     </>
   )
