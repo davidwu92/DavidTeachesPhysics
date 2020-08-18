@@ -9,7 +9,7 @@ const examples = () =>{
       {/* EXAMPLE PROBLEMS AND SOLUTIONS: ROW */}
       <div className="amber darken-1 row">{/* DISPLACEMENT EXAMPLE PROBLEMS */}
           <h5 className="center white-text">Displacement: Example Problems and Solutions</h5>
-
+          
           {/* EXAMPLE HERE */}
       </div>
     
