@@ -579,16 +579,19 @@ const Lesson1_3 = () => {
             </div>
           </div>
           <div className="col s12 m12 l12" style={{borderStyle: "solid none none none", borderColor:"#1565C0"}}>
-          <h5>Extra Tips</h5>
+          <h5>Tips, Pointers, and Reminders</h5>
             
-            <p className="center"><em>"Visualize. Then execute."</em></p>
-            <h6><li>Check that your diagram and equations truly model the problem, and make sure you can really visualize the situation. Do not proceed past Step 1 until you can.</li></h6>
+            <p className="center"><em>"Just like in training... Visualize, then execute."</em> - Zarya</p>
+            <h6><li>Check that your diagram and equations truly model the problem. Do not proceed past Step 1 until you can visualize the situation clearly!</li></h6>
             <h6><li>Know which variables should be positive, negative, or zero. Know how a variable's +/- sign might change over time (i.e. v<sub>y</sub> is positive for a tossed coin on the way up, 0 at its highest point, and negative as it falls back down).</li></h6>
-            <p className="center"><em>"Measure twice, cut once."</em></p>
+            <p className="center"><em>"Measure twice, cut once."</em> - Genji</p>
             <h6><li>Every number in a problem is a "given" with some variable and unit attached to it. Don't plug in "t = 10m/s" or "v = 50m/s<sup>2</sup>".</li></h6>
             <h6><li>Look for key words/phrases: "constant velocity" implies zero acceleration. "Falling" or "thrown" implies acceleration of a<sub>y</sub> = -9.8m/s<sup>2</sup>.</li></h6>
-            <p className="center"><em>"Double, triple, quadriple-check your math!"</em></p>
-            <h6><li></li></h6>
+            <p className="center"><em>"Double, triple, quadruple-check your math!"</em> - Sigma</p>
+            <h6>Understanding concepts, interpreting problems correctly, and knowing your equations is half the battle. The other half is properly applying math skills like...</h6>
+            <h6><li>Combining like terms and isolating variables using inverse operations</li></h6>
+            <h6><li>Factoring and using the Distributive Property</li></h6>
+            <h6><li>Graphing and using the Quadratic Formula</li></h6>
           </div>
         </div>
         <div className="amber darken-1 row">{/* PROBLEM-SOLVING GUIDE EXAMPLE PROBLEMS */}
