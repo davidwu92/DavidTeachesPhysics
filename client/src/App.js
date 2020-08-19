@@ -15,6 +15,7 @@ import ClassicalMechanics from './Pages/Lessons/ClassicalMechanics/ClassicalMech
 import Lesson1_1 from './Pages/Lessons/ClassicalMechanics/Kinematics/Lesson1_1'
 import Lesson1_2 from './Pages/Lessons/ClassicalMechanics/Kinematics/Lesson1_2'
 import Lesson1_3 from './Pages/Lessons/ClassicalMechanics/Kinematics/Lesson1_3'
+import Lesson1_4 from './Pages/Lessons/ClassicalMechanics/Kinematics/Lesson1_4'
 
 function App() {
 
@@ -71,6 +72,12 @@ function App() {
         <Route exact path="/lesson1_3">
           <Navbar/>
           <Lesson1_3/>
+        </Route>
+      </Switch>
+      <Switch>
+        <Route exact path="/lesson1_4">
+          <Navbar/>
+          <Lesson1_4/>
         </Route>
       </Switch>
 
