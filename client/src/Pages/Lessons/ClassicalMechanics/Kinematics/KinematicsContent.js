@@ -21,6 +21,9 @@ const KinematicsContent = () => {
         <br/>
         <br/>
         <button className="blue btn" onClick={()=>{history.push('/lesson1_3')}}>Lesson 1.3: Kinematics Equations in 1D</button>
+        <br/>
+        <br/>
+        <button className="blue btn" onClick={()=>{history.push('/lesson1_4')}}>Lesson 1.4: Kinematics Equations in 2D</button>
       
       </div>
     </>

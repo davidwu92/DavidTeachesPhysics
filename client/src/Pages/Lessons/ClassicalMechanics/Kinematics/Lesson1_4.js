@@ -4,6 +4,7 @@ import 'katex/dist/katex.min.css';
 import { BlockMath, InlineMath } from 'react-katex';
 import { useHistory } from 'react-router-dom';
 
+import cliffBoat from './1-4-Ex1.png'
 import golfBall from './1-4-golfBall.png'
 import velocityComponents from './1-4-velocityComponents.png'
 const Lesson1_3 = () => {
@@ -153,16 +154,47 @@ const Lesson1_3 = () => {
             <div className="col s12 m6 l6">{/* EX 1 */}
               <div className="card"> 
                 <div className="card-content" style={{minHeight: "50vh"}}>
-                  <span className="card-title grey-text text-darken-4">Ex 1. Finding Vector Components</span>
-                  <p style={{textIndent: "20px", fontWeight: "500"}}>A bowler rolls his ball from the middle of the foul line toward the pins positioned about 18 meters away. His ball has an initial velocity of 3 m/s, angled 5 degrees away from the lane lines.</p><br/>
-                  <p><b>A.</b> </p><br/>
-                  <p><b>B.</b> </p><br/>
-                  <p><b>C.</b> </p><br/>
+                  <span className="card-title grey-text text-darken-4">Ex 1. Finding Vector Components with Trigonometry</span>
+                  <p style={{textIndent: "20px", fontWeight: "500"}}>An observer is sitting at the edge of a seaside cliff when he spots a boat in the distance. With an inclinometer and laser distance meter, he measures that the boat is positioned 800 meters away, 25 degrees below the horizontal.</p><br/>
+                  <p><b>A.</b> How far up is the observer above sea level?</p><br/>
+                  <p><b>B.</b> How far is the boat from the bottom of the cliff?</p><br/>
+                  <p><b>C.</b> Suppose the boat is travelling toward shore at a rate of 10 m/s. Will the distance meter measure the boat to be 790 meters after one second, 780 meters after two, and so on?</p><br/>
                   <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
                 </div>
                 <div className="card-reveal">
                   <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                  
+                  <div className="row">
+                    <div className="col s5 m5 l5">
+                      <p style={{textIndent:"2em"}}>This is indeed a trigonometry problem! Note that the angle of depression (below the observer's horizontal) is the same as the angle of elevation from the boat, looking up at the observer: 25<sup>o</sup>.</p>
+                    </div>
+                    <div className="col s7 m7 l7">
+                      <img src={cliffBoat} width="100%"/>
+                    </div>
+                    <div className="col s12 m12 l12">
+                      <p style={{textIndent:"2em"}}>As long as you were able to come up with a diagram similar to the one shown here, you're ready to find the components of position vector, <InlineMath>{String.raw`\vec{r}`}</InlineMath>.</p>
+                      <p style={{textIndent:"2em"}}>I find that using positive and negative angles <em>can</em> lead to some confusion. It's often better to view these vectors as literal triangles with positive side lengths and angles, then apply appropriate negative signs for x-y-directions.</p>
+                      <div className="col s6 m6 l6">
+                        <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = rcos\theta`}</InlineMath></p>
+                        <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = (800m)cos25^\circ`}</InlineMath></p>
+                        <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = 725m`}</InlineMath></p>
+                      </div>
+                      <div className="col s6 m6 l6">
+                        <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δy = rsin\theta`}</InlineMath></p>
+                        <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δy = (800m)sin25^\circ`}</InlineMath></p>
+                        <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δy = 338m`}</InlineMath></p>
+                      </div>
+                      <p style={{textIndent:"2em"}}>Technically, the angle should be -25<sup>o</sup>, as the boat is located 25<sup>o</sup> <em>below</em> the horizontal from the observer's perspective. So, more accurately, <InlineMath>Δy = -338m</InlineMath> (which makes sense, as the boat is at a lower y-position!)</p>
+                      <p><b>A. </b>The observer is 338 meters above the water.</p>
+                      <p><b>B. </b>The boat is 725 meters away from the shore.</p>
+                      <p><b>C. </b>No, the distance meter will not measure a 10 meters less distance each passing second, because the boat isn't travelling 10m/s <em>toward the observer</em>. After one second, the boat travels 10 meters in the negative x-direction, placing it at x=715m from shore; we can use the Pythagorean Theorem to find the observer-boat distance at t=1s...</p>
+                      <p style={{textIndent:"4em"}}><InlineMath>{String.raw`r^2 = (Δx)^2 + (Δy)^2`}</InlineMath></p>
+                      <p style={{textIndent:"4em"}}><InlineMath>{String.raw`r^2 = (715)^2 + (338)^2`}</InlineMath></p>
+                      <p style={{textIndent:"4em"}}><InlineMath>{String.raw`r = 790.87m`}</InlineMath></p>
+                      
+                      <p style={{textIndent:"2em"}}>While it's possible to find the rate at which the distance meter reading is decreasing, this is more a Related Rates problem from first semester Calculus.</p>
+                      <p style={{textIndent:"2em"}}>In fact, the distance between observer and boat doesn't even decrease at a steady rate; imagine the point in time when the boat is directly under the observer (still going forward 10m/s). At that instant, the observer would measure a distance of "338m; the reading would stop decreasing, and begin to increase (as the boat, assuming constant velocity, travels onward through the... beach...).</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -190,7 +222,7 @@ const Lesson1_3 = () => {
               <div className="card"> 
                 <div className="card-content" style={{minHeight: "50vh"}}>
                   <span className="card-title grey-text text-darken-4">Ex 3. Analyzing Angles</span>
-                  <p style={{textIndent: "20px", fontWeight: "500"}}>A cue ball is positioned in the bottom left hand corner of a pool table (with dimensions of 1.42m x 2.84m). The ball is hit with a speed of 1 m/s, <InlineMath>\theta</InlineMath> degrees from the horizontal.</p><br/>
+                  <p style={{textIndent: "20px", fontWeight: "500"}}>A cue ball is positioned in the bottom left hand corner of a pool table (with dimensions of 1.42m x 2.84m). The ball is hit with a speed of 1 m/s, <InlineMath>\theta</InlineMath> degrees from the adjacent 1.42m side.</p><br/>
                   <p><b>A. </b>What values for <InlineMath>\theta</InlineMath> will cause the ball to hit the right wall first (before any other walls)?</p><br/>
                   <p><b>B. </b>What values for <InlineMath>\theta</InlineMath> will cause the ball to hit the top wall first?</p><br/>
                   <p><b>C. </b>Try predicting where and when the ball makes first contact with a wall if <InlineMath>\theta = 76^\circ</InlineMath>.</p><br/>
