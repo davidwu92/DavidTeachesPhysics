@@ -34,8 +34,8 @@ const Lesson1_3 = () => {
               <h5>Lesson Contents</h5>
               <div className="indigo darken-4" style={{height: "1px"}}></div><br/>
               <li><span onClick={()=>{document.getElementById("section1").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Vectors and Vector Components</u></span> reviews all prerequisite trigonometry and vector analysis skills.</li><br/>
-              <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Displacement as Functions of Time</u></span> will discuss how angled velocities and accelerations affect x- and y-displacements.</li><br/>
-              <li><span onClick={()=>{document.getElementById("section3").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>2D Projectile Motion</u></span> the paragon of kinematics problems, ubiquitous to every physics course.</li><br/>
+              <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>2D Projectile Motion</u></span> the paragon of kinematics problems, ubiquitous to every introductory physics course.</li><br/>
+              <li><span onClick={()=>{document.getElementById("section3").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Relative Motion</u></span> studies the behaviors of moving objects from different reference frames.</li><br/>
               <li><span onClick={()=>{document.getElementById("section4").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Problem-Solving Guide: 2D Kinematics</u></span></li><br/>
             </div>
           </h6>
@@ -235,33 +235,163 @@ const Lesson1_3 = () => {
                 </div>
               </div>
             </div>
-            <p></p>
+            <div className="col s12 m6 l6">{/* EX 4: Adding Vectors */}
+              <div className="card"> 
+                <div className="card-content" style={{minHeight: "50vh"}}>
+                  <span className="card-title grey-text text-darken-4">Ex 4. Adding (Velocity) Vectors</span>
+                  <p style={{textIndent: "20px", fontWeight: "500"}}>A child drops his paratrooper toy from the side of a building, 12 meters above the ground. Without any wind, this toy would nearly-immediately reach its terminal velocity of 0.68 m/s downward; but due to the breezy weather, it is pushed away from the building wall with a velocity of 0.37 m/s as it falls.</p><br/>
+                  <p><b>A. </b>What's the speed of the toy during its fall? (No acceleration due to gravity to account for, due to the toy's parachute design!)</p><br/>
+                  <p><b>B. </b>At what angle away from the vertical is the toy's velocity vector pointing?</p><br/>
+                  <p><b>C. </b>When does the toy land on the ground? How far is it from the building when it lands?</p><br/>
+                  <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+                </div>
+                <div className="card-reveal">
+                  <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                  
+                </div>
+              </div>
+            </div>
         </div>
 
       </div>{/* Section 1 End*/}
 
-      <div id="section2" className="blue lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 2 Displacements as Functions of Time*/}
-        <h4 className="blue-text text-darken-3">Displacements as Functions of Time</h4>
+      <div id="section2" className="blue lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 2 2D Projectile Motion*/}
+        <h4 className="blue-text text-darken-3">2D Projectile Motion</h4>
         
-        <div className="row">{/* Two Kinematics Equations CONTENT */}
-          <div className="col s7 m8 l8 blue lighten-4">
-            <h6>Consider the following situation:</h6>
-            <p>Patricia, Xena, and Yolanda stand together at the edge of a field.</p>
-            <p>Patricia punts a ball with an initial speed of <InlineMath>v</InlineMath>, at some angle above the horizontal <InlineMath>\theta</InlineMath>.</p>
-            <p>As soon as Patricia kicks her ball, Xena runs forward such that she is always directly under the ball.</p>
-            <p>Meanwhile, Yolanda throws her ball upward, such that her ball constantly has the same height as Patricia's punted ball.</p>
-            <p className="center"><em>How fast must Xena be running? What initial speed does Yolanda need to throw her ball?</em></p>
+        <div className="row" style={{display:"flex", flexWrap:"wrap"}}>{/* 2D Projectile Motion CONTENT */}
+          <div className="col s6 m6 l6 blue lighten-4">
+            <h5>Consider the following situation:</h5>
+            <p><b><span className="red-text text-darken-1">Patricia</span>, <span className="green-text text-darken-2">Xena</span>, and <span className="blue-text text-darken-3">Yolanda</span> stand together at the edge of a field.</b></p>
+            <p className="red-text text-darken-1">Patricia punts a ball with an initial speed of <InlineMath>v</InlineMath>, at some angle above the horizontal <InlineMath>\theta</InlineMath>.</p>
+            <p className="green-text text-darken-2">As soon as Patricia kicks her ball, Xena runs forward such that she is always directly under the ball.</p>
+            <p className="blue-text text-darken-3">Meanwhile, Yolanda throws her ball upward, such that her ball constantly has the same height as Patricia's punted ball.</p>
+            {/* <p className="center"><em>How fast must Xena be running? What initial speed does Yolanda need to throw her ball?</em></p> */}
+            <div className="col s12 m12 l12 blue"></div>
+            <div className="col s12 m12 l12">
+              <h6>To help visualize this, I've graphed all three objects' motions with initial conditions:</h6>
+              <div className="col s6 m6 l6 center"><h6><InlineMath>v_o = 8.544 m/s</InlineMath></h6></div>
+              <div className="col s6 m6 l6 center"><h6><InlineMath>\theta = 69.4^\circ</InlineMath></h6></div>
+              <br/>
+              <br/>
+              <p><em>You can drag Patricia's ball along its parabolic trajectory to see where all three objects are at different points in time!</em></p>
+            </div>
+          </div>
+          <div className="col s6 m6 l6 blue darken-3" style={{minWidth: "500px", minHeight: "400px"}}>
+            <h6 className="center white-text"><em>Points P, X, and Y over time.</em></h6>
+            <iframe src="https://www.desmos.com/calculator/ozcqusfgbn?embed" width="100%" height="90%"></iframe>
           </div>
 
+          <div className="col s12 m12 l12">
+              <h5 className="center">The Displacement Equations as <InlineMath>x(t)</InlineMath> and <InlineMath>y(t)</InlineMath> functions</h5>
+              <p style={{textIndent: "4em"}}>Like any object flying around on a 2-D coordinate system, Patricia's ball has x- and y-displacements that are functions of time. Since this is a projectile motion problem (where flying objects have constant acceleration, g=9.8m/s<sup>2</sup> pointed down), we can use the x- and y-displacement equations as functions that model exactly where the ball is at time <em>t</em>.</p>
+              <div className="col s6 m6 l6 center">
+                <h6><InlineMath>{String.raw`Δx=v_{ox}t + \frac{1}{2}a_xt^2`}</InlineMath></h6>
+                <h6><InlineMath>{String.raw`Δx=v_ocos(\theta)t`}</InlineMath></h6>
+              </div>
+              <div className="col s6 m6 l6 center">
+                <h6><InlineMath>{String.raw`Δy=v_{oy}t + \frac{1}{2}a_yt^2`}</InlineMath></h6>
+                <h6><InlineMath>{String.raw`Δy=v_osin(\theta)t - \frac{1}{2}gt^2`}</InlineMath></h6>
+              </div>
+              <p className="center"><em>The x- and y-displacements of the ball are two parametric equations that, together, draw out the ball's path through space.</em></p>
+              <div className="col s12 m12 l12 blue"></div>
+              <div className="container">
+                <br/>
+                <h6>
+                  <h6 className="center">To analyze any 2D projectile motion, keep these pointers in mind:</h6>
+                  <br/>
+                  <li>Any relevant vectors and the equations containing them <u>must be analyzed using x- and y-component vectors</u>.</li>
+                  <p className="center"><em>Given some angled launch velocity <InlineMath>v_o</InlineMath> pointed <InlineMath>\theta^\circ</InlineMath> above the horizontal, you'll need to find <InlineMath>{`v_{ox}`}</InlineMath> and <InlineMath>{`v_{oy}`}</InlineMath>.</em></p>
+                  <br/>
+                  <li>The two sets of kinematics equations (one for each direction) are generally united by the time parameter.</li>
+                  <p className="center"><em>If you can find the time when the object reaches a particular <em>x</em>-position...</em></p>
+                  <p className="center"><em>...it should help you find its y-position at that time. And vice versa!</em></p>
+                  <br/>
+                  <li>Acceleration due to gravity almost always points in the negative-y direction: <InlineMath>a_x = 0m/s^2</InlineMath>.</li>
+                  <br/>
+                  <li>Without air resistance, projectiles follow a parabolic path. Using symmetry...</li>
+                  <p className="center"><em>If a projectile's starting and final positions have the same height (<InlineMath>{String.raw`y_o = y_f`}</InlineMath>)...</em></p>
+                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`v_{oy} = -v_{fy}`}</InlineMath> ... initial and final y-speeds are equal and opposite.</p>
+                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`\theta_o = -\theta_f`}</InlineMath> ... v<sub>o</sub>'s angle above horizontal is the opposite of v<sub>f</sub>'s angle.</p>
+                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`t_{apex} = \frac{1}{2}t_{land}`}</InlineMath> ...the time taken to reach the top of its trajectory is half the time it takes to hit the floor.</p>
+                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`x_{apex} = \frac{1}{2}x_f`}</InlineMath> ...same with x-displacement; half the max distance is where the ball's at its apex.</p>
+                </h6>
+            </div>
+          </div>
         </div>
-        <div className="amber darken-1 row">{/* Displacement EQ EXAMPLE PROBLEMS */}
-        
+        <div className="amber darken-1 row">{/* 2D PROJECTILE EXAMPLES */}
+          <div className="col s12 m6 l6">{/* EX 5 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 5. Horizontal Launches: <em>v<sub>oy</sub></em> is zero</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>A marble rolls off the top of a desk 1.25 meters above the floor.</p><br/>
+                <p><b>A.</b> How long does the marble take to hit the floor?</p><br/>
+                <p><b>B.</b> If the marble was rolling at 2.6 m/s, how far away from the foot of the desk does the marble land?</p><br/>
+                <p><b>C.</b> If the marble landed 6 meters away from the foot of the desk, how fast was it rolling before it fell?</p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+
+          <div className="col s12 m6 l6">{/* EX 6 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 6. Finding Positions given <InlineMath>{String.raw`\vec{v}`}</InlineMath> and <InlineMath>{String.raw`\theta`}</InlineMath></span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}></p><br/>
+                <p><b>A.</b> </p><br/>
+                <p><b>B.</b> </p><br/>
+                <p><b>C.</b> </p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+          <div className="col s12 m6 l6">{/* EX 7 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 7. Shortcuts in Analyzing Parabolic Trajectories</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>A football is kicked from the end of a flat football field. It reaches a maximum height of 25 meters, and hits the field 68 meters away from where it was kicked.</p><br/>
+                <p><b>A.</b> </p><br/>
+                <p><b>B.</b> </p><br/>
+                <p><b>C.</b> </p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+          <div className="col s12 m6 l6">{/* EX 8 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 8. Concept Name</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>Problem</p><br/>
+                <p><b>A.</b> </p><br/>
+                <p><b>B.</b> </p><br/>
+                <p><b>C.</b> </p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                
+              </div>
+            </div>
+          </div>
+
+
         </div>
 
       </div>{/* Section 2 End*/}
 
       <div id="section3" className="green lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 3 2D Projectile Motion*/}
-        <h4 className="green-text text-darken-3">2D Projectile Motion</h4>
+        <h4 className="green-text text-darken-3">Relative Motion</h4>
         
         <div className="row">{/* V-Squared EQ CONTENT */}
         
