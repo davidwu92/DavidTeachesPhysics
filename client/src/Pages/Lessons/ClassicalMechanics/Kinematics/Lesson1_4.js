@@ -367,11 +367,12 @@ const Lesson1_3 = () => {
           </div>
         </div>
         <div className="amber darken-1 row">{/* 2D PROJECTILE EXAMPLES */}
+          <h5 className="center white-text">2D Projecile Motion: Example Problems and Solutions</h5>
           <div className="col s12 m6 l6">{/* EX 5 */}
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 5. Horizontal Launches: <em>v<sub>oy</sub></em> is zero</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>A marble rolls off the top of a desk 1.25 meters above the floor.</p><br/>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>A marble rolls off the edge of a flat desk 1.25 meters above the floor.</p><br/>
                 <p><b>A.</b> How long does it take for the marble to hit the floor?</p><br/>
                 <p><b>B.</b> If the marble was rolling at 2.6 m/s, how far away from the foot of the desk does the marble land?</p><br/>
                 <p><b>C.</b> If the marble landed 6 meters away from the foot of the desk, how fast was it rolling before it fell?</p><br/>
@@ -379,7 +380,7 @@ const Lesson1_3 = () => {
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                <p><b>A. </b>The marble will drop at the same rate regardless of its horizontal velocity. So to find "how long" it takes to hit the ground, we'll use the Δy equation...</p>
+                <p><b>A. </b>The marble will drop at the same rate regardless of its horizontal velocity. So to find how long it takes to hit the ground, we'll use the Δy equation...</p>
                 <p style={{textIndent:"2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
                 <p style={{textIndent:"2em"}}><InlineMath>{String.raw`-1.25 = (0)t + \frac{1}{2}(-9.8)t^2`}</InlineMath></p>
                 <p style={{textIndent:"2em"}}><InlineMath>{String.raw`-1.25 = -4.9t^2`}</InlineMath></p>
