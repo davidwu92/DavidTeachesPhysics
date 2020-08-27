@@ -12,6 +12,7 @@ import ex6cannon from './1-4-Ex6.png'
 import ex6C from './1-4-Ex6C.png'
 import ex7football from './1-4-Ex7.png'
 import ex7B from './1-4-Ex7B.png'
+import ex8 from './1-4-Ex8.png'
 const Lesson1_3 = () => {
   const history = useHistory()
 
@@ -299,27 +300,69 @@ const Lesson1_3 = () => {
               </div>
               <p className="center"><em>The x- and y-displacements of the ball are two parametric equations that, together, draw out the ball's path through space.</em></p>
               <div className="col s12 m12 l12 blue"></div>
-              <div className="container">
-                <br/>
-                <h6>
-                  <h6 className="center">To analyze any 2D projectile motion, keep these pointers in mind:</h6>
-                  <br/>
-                  <li>Any relevant vectors and the equations containing them <u>must be analyzed using x- and y-component vectors</u>.</li>
-                  <p className="center"><em>Given some angled launch velocity <InlineMath>v_o</InlineMath> pointed <InlineMath>\theta^\circ</InlineMath> above the horizontal, you'll need to find <InlineMath>{`v_{ox}`}</InlineMath> and <InlineMath>{`v_{oy}`}</InlineMath>.</em></p>
-                  <br/>
-                  <li>The two sets of kinematics equations (one for each direction) are generally united by the time parameter.</li>
-                  <p className="center"><em>If you can find the time when the object reaches a particular <em>x</em>-position...</em></p>
-                  <p className="center"><em>...it should help you find its y-position at that time. And vice versa!</em></p>
-                  <br/>
-                  <li>Acceleration due to gravity almost always points in the negative-y direction: <InlineMath>a_x = 0m/s^2</InlineMath>.</li>
-                  <br/>
-                  <li>Without air resistance, projectiles follow a parabolic path. Using symmetry...</li>
+              <div className="col s8 m8 l8">
+                <ol>
+                  <h6>
+                    <h5 className="center">For 2D motion, keep these pointers in mind...</h5>
+                    <br/>
+                    <li>Any relevant vectors and the equations containing them <u>must be analyzed using x- and y-component vectors</u>.</li>
+                    <p className="center"><em>Given initial velocity <InlineMath>v_o</InlineMath> pointed <InlineMath>\theta^\circ</InlineMath> above the horizontal, practice finding <InlineMath>{`v_{ox}`}</InlineMath> and <InlineMath>{`v_{oy}`}</InlineMath>.</em></p>
+                    <br/>
+                    <li>The two sets of kinematics equations (one for each direction) are united by the time parameter.</li>
+                    <p className="center"><em>If you can find the time <u>when</u> the object reaches a particular <em>x</em>-position...</em></p>
+                    <p className="center"><em>...it should help you find its y-position at that time. And vice versa!</em></p>
+                    <br/>
+                    <li>Acceleration due to gravity almost always points in the negative-y direction: <InlineMath>a_x = 0m/s^2</InlineMath> and <InlineMath>a_y = -9.8m/s^2</InlineMath>.</li>
+                    <p className="center"><em>Don't <u>ever</u> mistakenly put in <InlineMath>a=-9.8m/s</InlineMath> for an x-equation: <InlineMath>{String.raw`Δx = 5t -4.9t^2`}</InlineMath>.</em></p>
+                    <br/>
+                    <li>Without air resistance, projectiles follow a parabolic path. Using symmetry...</li>
+                  </h6>
+                </ol>
                   <p className="center"><em>If a projectile's starting and final positions have the same height (<InlineMath>{String.raw`y_o = y_f`}</InlineMath>)...</em></p>
-                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`v_{oy} = -v_{fy}`}</InlineMath> ... initial and final y-speeds are equal and opposite.</p>
-                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`\theta_o = -\theta_f`}</InlineMath> ... v<sub>o</sub>'s angle above horizontal is the opposite of v<sub>f</sub>'s angle.</p>
-                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`t_{apex} = \frac{1}{2}t_{land}`}</InlineMath> ...the time taken to reach the top of its trajectory is half the time it takes to hit the floor.</p>
-                  <p style={{textIndent: "10%"}}><InlineMath>{String.raw`x_{apex} = \frac{1}{2}x_f`}</InlineMath> ...same with x-displacement; half the max distance is where the ball's at its apex.</p>
-                </h6>
+                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`v_{oy} = -v_{fy}`}</InlineMath> ... initial and final y-speeds are equal and opposite.</p>
+                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`\theta_o = -\theta_f`}</InlineMath> ... v<sub>o</sub>'s angle above horizontal is the opposite of v<sub>f</sub>'s angle.</p>
+                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`t_{apex} = \frac{1}{2}t_{land}`}</InlineMath> ...the time taken to reach the top of its trajectory is half the time it takes to hit the floor.</p>
+                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`x_{apex} = \frac{1}{2}x_f`}</InlineMath> ...same with x-displacement; half the max distance is where the ball's at its apex.</p>
+            </div>
+            <div className="col s4 m4 l4">
+              <h5 className="center">2D Kinematics Formula Sheet</h5>
+              <p className="center"><em>Each of these equations are for the x-direction only! <br/>Use "y" instead of x for the other direction.</em></p>
+              <div className="col s12 m12 l12">
+                <div className="col s6 m6 l6">
+                  <p className="center">Definition of Velocity</p>
+                  <h6 className="center"><InlineMath>{String.raw`\vec{v_{x}}_{avg} = \frac{Δx}{t}`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6">
+                  <p className="center">Definition of Acceleration</p>
+                  <h6 className="center"><InlineMath>{String.raw`\vec{a_x} = \frac{Δv_x}{t}`}</InlineMath></h6>
+                </div>
+                <div className="col s12 m12 l12"></div>
+                <div className="col s6 m6 l6">
+                  <p className="center">Displacement Equation</p>
+                  <h6 className="center"><InlineMath>{String.raw`Δx = v_{ox}t + \frac{1}{2}a_xt^2`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6">
+                  <p className="center">The V-Squared Equation</p>
+                  <h6 className="center"><InlineMath>{String.raw`v_{fx}^2 = v_{ox}^2 + 2aΔx`}</InlineMath></h6>
+                </div>
+              </div>
+              <div className="col s12 m12 l12 blue darken-3"></div>
+              <div className="col s12 m12 l12">
+                <h5 className="center">Vectors and Their Components</h5>
+                <p><em>For any vector (<InlineMath>{String.raw`\vec{v_o}`}</InlineMath> in these sample) pointed θ degrees above the horizontal...</em></p>
+                <div className="col s6 m6 l6 center">
+                  <h6><InlineMath>{String.raw`v_o^2 = v_{ox}^2 + v_{oy}^2`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6 center">
+                  <h6><InlineMath>{String.raw`\theta = tan^{-1}(\frac{v_{oy}}{v_{ox}})`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6 center">
+                  <h6><InlineMath>{String.raw`v_{oy} = v_osin\theta`}</InlineMath></h6>
+                </div>
+                <div className="col s6 m6 l6 center">
+                  <h6><InlineMath>{String.raw`v_{ox} = v_ocos\theta`}</InlineMath></h6>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -555,15 +598,63 @@ const Lesson1_3 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 8. Using a Given Final Velocity</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>At a hypothetical crime scene, forensic scientists find a bullet wedged into a wall 10 meters across from the shooter's suspected position. The bullet hit the wall 1.23 meters above the ground at a velocity of about 234 m/s, angled 5.6 degrees below the horizontal.</p><br/>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>At a hypothetical crime scene, forensic scientists find a bullet wedged into a wall 100.0 meters across from the shooter's suspected position. The bullet hit the wall 1.23 meters above the ground at a velocity of about 234 m/s, angled 5.6 degrees below the horizontal.</p><br/>
                 <p><b>A.</b> How much time elapsed between the gun firing and the bullet hitting the wall?</p><br/>
-                <p><b>B.</b> Find the x- and y-components of the bullet's initial velocity.</p><br/>
-                <p><b>C.</b> From what height and angle was the bullet fired?</p><br/>
+                <p><b>B.</b> Find the bullet's initial velocity (speed and angle above/below the horizontal).</p><br/>
+                <p><b>C.</b> From what height was the bullet fired?</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                
+                <p>Here's our diagram (not drawn to scale). We don't actually know how the gun was angled (above or below the horizontal) or how high up the shooter was positioned; the bullet could've come from a rooftop for all we know.</p>
+                <img src={ex8} width="100%"/>
+                <p>Like any problem that provides velocity as a magnitude and angle, we should find the x- and y-components of this vector.</p>
+                <div className="row">
+                  <div className="col s6 m6 l6">
+                    <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fx} = v_fcos\theta`}</InlineMath></p>  
+                    <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fx} = 234cos(-5.6^\circ)`}</InlineMath></p>  
+                    <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fx} = 232.883m/s`}</InlineMath></p>  
+                  </div>
+                  <div className="col s6 m6 l6">
+                    <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fy} = v_fsin\theta`}</InlineMath></p>
+                    <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fy} = 234sin(-5.6^\circ)`}</InlineMath></p>
+                    <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fy} = -22.834m/s`}</InlineMath></p>
+                  </div>
+                </div>
+                <p><em>Since we're working with lots of large and small numbers, it's worth keeping around as many significant figures as we can throughout this calculation.</em></p>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>A. </b>Finding the time elapsed is a simple matter of using the definition of velocity (or x-displacement equation, with zero acceleration).</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = v_{x}t`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`t = \frac{Δx}{v_{x}} = \frac{100m}{232.883m/s}`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`t = 0.4294s`}</InlineMath></p>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>B. </b>To find the initial velocity, we'll need both x- and y-components.</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{ox} = v_{fx} = 232.883m/s`}</InlineMath></p>
+                <p>...and the y-component is found using the definition of acceleration, isolating v<sub>o</sub>.</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δv_y = a_yt`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fy} - v_{oy} = a_yt`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{oy} = v_{fy}-a_yt`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{oy} = -22.834-(-9.8)(0.4294)`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{oy} = -18.6259m/s`}</InlineMath></p>
+                <p>With both these components, we can now find the speed and angle at which the bullet was fired!</p>
+                <div className="col s6 m6 l6">
+                  <p><InlineMath>{String.raw`v_o^2 = v_{ox}^2 + v_{oy}^2`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_o = \sqrt{(232.883)^2 + (-18.6259)^2}`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_o = 233.6267m/s`}</InlineMath> initial speed.</p>
+                </div>
+                <div className="col s6 m6 l6">
+                  <p><InlineMath>{String.raw`tan\theta = v_{oy}/v_{ox}`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`tan\theta = -18.6259/232.883`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`\theta = -4.5728^\circ`}</InlineMath></p>
+                  <p>...about ~4.6 degrees below the horizontal.</p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>C. </b>The height at which the bullet was fired is its y-displacement, plus the final 1.2m above the ground. Either the v-squared or y-displacement equations will get us the coveted Δy.</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = (-18.6259)(0.4294) + \frac{1}{2}(-9.8)(0.4294)^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = -8.9014m`}</InlineMath></p>
+                <p><em>So the bullet shot from a position ~8.9 meters above the bullet hole. Add the final y-position of 1.23m for...</em></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`y_o = 10.1314m`}</InlineMath> was the initial height of the shooter (above ground).</p>
               </div>
             </div>
           </div>

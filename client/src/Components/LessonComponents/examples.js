@@ -34,6 +34,8 @@ const examples = () =>{
     
     θ 
     Δ
+    <InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath>
+    <InlineMath>{String.raw`v_{fy}^2 = v_{oy}^2 + 2aΔy`}</InlineMath>
     </>
   )
 }
