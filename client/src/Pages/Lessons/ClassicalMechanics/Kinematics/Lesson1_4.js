@@ -555,10 +555,10 @@ const Lesson1_3 = () => {
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 8. Using a Given Final Velocity</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}></p><br/>
-                <p><b>A.</b> </p><br/>
-                <p><b>B.</b> </p><br/>
-                <p><b>C.</b> </p><br/>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>At a hypothetical crime scene, forensic scientists find a bullet wedged into a wall 10 meters across from the shooter's suspected position. The bullet hit the wall 1.23 meters above the ground at a velocity of about 234 m/s, angled 5.6 degrees below the horizontal.</p><br/>
+                <p><b>A.</b> How much time elapsed between the gun firing and the bullet hitting the wall?</p><br/>
+                <p><b>B.</b> Find the x- and y-components of the bullet's initial velocity.</p><br/>
+                <p><b>C.</b> From what height and angle was the bullet fired?</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
