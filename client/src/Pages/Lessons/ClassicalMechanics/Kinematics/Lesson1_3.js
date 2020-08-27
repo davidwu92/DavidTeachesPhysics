@@ -580,7 +580,6 @@ const Lesson1_3 = () => {
           </div>
           <div className="col s12 m12 l12" style={{borderStyle: "solid none none none", borderColor:"#1565C0"}}>
           <h5>Tips, Pointers, and Reminders</h5>
-            
             <p className="center"><em>"Just like in training... Visualize, then execute."</em> - Zarya</p>
             <h6><li>Check that your diagram and equations truly model the problem. Do not proceed past Step 1 until you can visualize the situation clearly!</li></h6>
             <h6><li>Know which variables should be positive, negative, or zero. Know how a variable's +/- sign might change over time (i.e. v<sub>y</sub> is positive for a tossed coin on the way up, 0 at its highest point, and negative as it falls back down).</li></h6>

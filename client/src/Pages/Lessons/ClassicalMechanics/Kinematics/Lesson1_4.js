@@ -6,7 +6,12 @@ import { useHistory } from 'react-router-dom';
 
 import cliffBoat from './1-4-Ex1.png'
 import golfBall from './1-4-golfBall.png'
+import maxSoccer from './1-4-Ex9.png'
 import velocityComponents from './1-4-velocityComponents.png'
+import ex6cannon from './1-4-Ex6.png'
+import ex6C from './1-4-Ex6C.png'
+import ex7football from './1-4-Ex7.png'
+import ex7B from './1-4-Ex7B.png'
 const Lesson1_3 = () => {
   const history = useHistory()
 
@@ -324,14 +329,26 @@ const Lesson1_3 = () => {
               <div className="card-content" style={{minHeight: "50vh"}}>
                 <span className="card-title grey-text text-darken-4">Ex 5. Horizontal Launches: <em>v<sub>oy</sub></em> is zero</span>
                 <p style={{textIndent: "20px", fontWeight: "500"}}>A marble rolls off the top of a desk 1.25 meters above the floor.</p><br/>
-                <p><b>A.</b> How long does the marble take to hit the floor?</p><br/>
+                <p><b>A.</b> How long does it take for the marble to hit the floor?</p><br/>
                 <p><b>B.</b> If the marble was rolling at 2.6 m/s, how far away from the foot of the desk does the marble land?</p><br/>
                 <p><b>C.</b> If the marble landed 6 meters away from the foot of the desk, how fast was it rolling before it fell?</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                
+                <p><b>A. </b>The marble will drop at the same rate regardless of its horizontal velocity. So to find "how long" it takes to hit the ground, we'll use the Δy equation...</p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`-1.25 = (0)t + \frac{1}{2}(-9.8)t^2`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`-1.25 = -4.9t^2`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`t = 0.505s`}</InlineMath></p>
+                <p><b>B. </b>The marble is in the air for 0.505 seconds, during which time its x-velocity is a constant 2.6m/s and its x-acceleration is zero.</p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`Δx = v_{ox}t + \frac{1}{2}at^2`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`Δx = 2.6(0.505)`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`Δx = 1.313m`}</InlineMath></p>
+                <p><b>C. </b>Same as B, except the x-displacement is given (6m upon landing) and we must find its initial velocity!</p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`Δx = v_{ox}t + \frac{1}{2}at^2`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`(6)= v_{ox}(0.505)`}</InlineMath></p>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`v_{ox} = 11.88m/s`}</InlineMath></p>
               </div>
             </div>
           </div>
@@ -339,7 +356,205 @@ const Lesson1_3 = () => {
           <div className="col s12 m6 l6">{/* EX 6 */}
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
-                <span className="card-title grey-text text-darken-4">Ex 6. Finding Positions given <InlineMath>{String.raw`\vec{v}`}</InlineMath> and <InlineMath>{String.raw`\theta`}</InlineMath></span>
+                <span className="card-title grey-text text-darken-4">Ex 6. Angled Launches: the Typical 2D Kinematics Problem</span>
+                <div className="col s6 m6 l6">
+                  <p style={{textIndent: "20px", fontWeight: "500"}}>The amazing human cannonball (see gif) is launched from a height of 8 meters above the floor with a speed of 15 m/s, angled 65<sup>o</sup> above the horizontal. He lands gracefully on the floor some time later.</p><br/>
+                </div>
+                <div className="col s6 m6 l6 center">
+                  <iframe src="https://giphy.com/embed/DlJqDfBkYxG5G" width="120%" frameBorder="0"></iframe>
+                </div>
+                <div className="col s12 m12 l12">
+                  <p><b>A.</b> What's his maximum height (above the ground)?</p><br/>
+                  <p><b>B.</b> What time does he hit the floor? How far is this from the cannon base?</p><br/>
+                  <p><b>C.</b> With what velocity does he hit the floor?</p><br/>
+                </div>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                <p>This is the archetypical kinematics problem. Be sure to give it an honest attempt, then look through my solution carefully!</p>
+                <div className="row">
+                  <div className="col s4 m4 l4">
+                    <p><InlineMath>y_o = 8m</InlineMath></p>
+                  </div>
+                  <div className="col s4 m4 l4">
+                    <p><InlineMath>v_o = 15m/s</InlineMath></p>
+                  </div>
+                  <div className="col s4 m4 l4">
+                    <p><InlineMath>θ = 65^\circ</InlineMath></p>
+                  </div>
+                </div>
+                <p>Those are all our givens from the problem! We should take a second to find the x- and y-components of <InlineMath>{String.raw`\vec{v_o}`}</InlineMath>...</p>
+                <div className="row">
+                  <div className="col s6 m6 l6">
+                    <p><InlineMath>{String.raw`v_{ox} = v_ocos\theta`}</InlineMath></p>  
+                    <p><InlineMath>{String.raw`v_{ox} = 15cos(65^\circ) = 6.339m/s`}</InlineMath></p>  
+                  </div>
+                  <div className="col s6 m6 l6">
+                    <p><InlineMath>{String.raw`v_{oy} = v_osin\theta`}</InlineMath></p>
+                    <p><InlineMath>{String.raw`v_{oy} = 15sin(65^\circ) = 13.595m/s`}</InlineMath></p>
+                  </div>
+                </div>
+                <p>Meanwhile, the unknowns to find are A. y<sub>max</sub>, B. time and Δx of landing, and C. v<sub>f</sub> at time of landing. Here's the complete diagram outlining everything.</p>
+                <div className="col s12 m12 l12">
+                  <img src={ex6cannon} width="100%"/>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>A. </b>The "cannonball" reaches his highest point when his y-velocity is zero. The quickest way to do this is to use the V-Squared equation (for y-velocities), since we don't actually care about how much time he takes to reach the top of his trajectory.</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{fy}^2 = v_{oy}^2 + 2a(Δy)`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`(0)^2 = (13.595)^2 + 2(-9.8)(Δy)`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`(0)^2 = 184.824 - 19.6(Δy)`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = 9.434m`}</InlineMath> is the maximum displacement from where the man was launched.</p>
+                <p className="center">So he reaches a height of 17.43 meters above the floor before coming back down.</p>
+                <p><em>Of course it's possible to find that value using time-relevant equations! Try finding how long it takes to reach the max height (using the definition of acceleration), then plugging that time into the displacement equation to verify this solution.</em></p>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>B. </b>We'll use the displacement equation in the y-direction to find how long our cannonball-man is in the air. Then, we can use that time in the x-displacement equation to figure out exactly how far away he lands.</p>
+                <div className="col s7 m7 l7">
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`-8 = 13.595t -4.9t^2`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`0 = -4.9t^2 + 13.59t + 8`}</InlineMath></p>
+                  <p>...and the <span className="purple-text">quadratic formula</span> will find "t" for us.</p>
+                </div>
+                <div className="col s5 m5 l5 purple-text">
+                  <p className="center"><em>For quadratic equations </em><InlineMath>{String.raw`0 = ax^2 + bx + c`}</InlineMath>...</p>
+                  <h6 className="center"><InlineMath>{String.raw`x = \frac{-b \pm \sqrt{b^2 -4ac}}{2a}`}</InlineMath></h6>
+                </div>
+                <h6 style={{textIndent:"2em"}}><InlineMath>{String.raw`t = \frac{-13.595 \pm \sqrt{(13.595)^2 -4(-4.9)(8)}}{2(8)}`}</InlineMath></h6>
+                <p style={{textIndent:"2em"}}><InlineMath>{String.raw`t = 3.273`}</InlineMath> or <InlineMath>{String.raw`t = -0.499`}</InlineMath> seconds.</p>
+                <p>Of course the negative time is extranneous; it implies that the other time our man has y<sub>f</sub>=0m is about half a second before his launch.</p>
+                <p>To understand exactly where that extranneous value comes from, try graphing the displacement equation in a slightly different form...</p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`y_f - y_o = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`y_f = \frac{1}{2}at^2 + v_{oy}t + y_o`}</InlineMath> a quadratic equation in standard form!</p>
+                <div className="col s6 m6 l6">
+                  <p>This form of the y-displacement equation gives us the man's y-position is a function of time, t.</p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`y(t) = -4.9t^2 + 13.595t + 8`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}> ...for times <InlineMath>t \geq 0</InlineMath>.</p>
+                </div>
+                <div className="col s6 m6 l6">
+                  <iframe src="https://www.desmos.com/calculator/tyrs7hwlfz?embed" width="100%"></iframe>
+                </div>
+                <div className="col s12 m12 l12">
+                  <p>The displacement equation, like any other equation we use, acts as a model for the situation at hand. The man's y-position is modeled by the parabola above only for times between 0 and 3.273 seconds, after which he is certainly motionless on the ground (and hopefully not seriously injured).</p>
+                  <p>Regardless of his wellbeing, we still must find the range of his motion, Δx; since he's airborn for 3.273 seconds, and his x-velocity is 6.339m/s...</p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = v_{ox}t + \frac{1}{2}a_xt^2`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = 6.339(3.273) + 0`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = 20.75m`}</InlineMath></p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>C. </b>To find his final velocity vector, we need vector components <InlineMath>{String.raw`v_{fx}`}</InlineMath> and <InlineMath>{String.raw`v_{fy}`}</InlineMath>.</p>
+                <p>Since he doesn't accelerate horizontally, <InlineMath>{String.raw`v_{fx} = v_{ox} = 6.339m/s`}</InlineMath>.</p>
+                <p>To find <InlineMath>{String.raw`v_{fy}`}</InlineMath>, we <em>could</em> use the definition of acceleration with time <InlineMath>t=3.273s</InlineMath>.</p>
+                <p>But if we made a mistake in calculating the time in the air, that mistake would compound into this part's calculation; let's use the v-squared equation instead, and verify with the definition of acceleration.</p>
+                <div className="col s6 m6 l6">
+                  <p><InlineMath>{String.raw`v_{fy}^2 = v_{oy}^2 + 2a(Δy)`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy}^2 = 13.595^2 + 2(-9.8)(-8)`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy}^2 = 341.62`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy} = -18.483m/s`}</InlineMath></p>
+                  <p><em>His y-velocity starts at around positive 14m/s, and never increases. Plus he wouldn't be falling if his final y-velocity was positive.</em></p>
+                </div>
+                <div className="col s6 m6 l6">
+                  <p><em>Verifying this using t from part B and the definition of acceleration...</em></p>
+                  <p><InlineMath>{String.raw`Δv_y = a_yt`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy} - v_{oy} = at`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy} = at + v_{oy} = -9.8(3.273) + 13.595`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{fy} = -18.48 m/s`}</InlineMath></p>
+                </div>
+                <div className="col s12 m12 l12">
+                  <p>It's important to verify each calculation using other equations! This simulataneously checks if our time and final y-velocities are correct, and the only way we could possibly be incorrect now is if we had the wrong <InlineMath>{String.raw`v_{oy}`}</InlineMath> to begin with.</p>
+                  <p>And so to find the final velocity vector, we use trigonometry...</p>
+                </div>
+                <div className="col s5 m5 l5">
+                  <img src={ex6C} width="100%"/>
+                </div>
+                <div className="col s7 m7 l7">
+                  <p><InlineMath>{String.raw`v_f^2 = v_{fx}^2 + v_{fy}^2`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_f = \sqrt{(6.339)^2 + (-18.483)^2}`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_f = 19.53m/s`}</InlineMath> landing speed.</p>
+                  <hr></hr>
+                  <p><InlineMath>{String.raw`tan\theta = v_{fy}/v_{fx}`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`tan\theta = -18.783/6.339`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`\theta = -71.35^\circ`}</InlineMath> or 71.35 degrees below the horizontal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="col s12 m6 l6">{/* EX 7 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 7. Using Symmetry in Parabolic Trajectories</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>A football is kicked from the end of a flat football field. It reaches a maximum height of 25 meters, and hits the field 68 meters away from where it was kicked.</p><br/>
+                <p><b>A.</b> Find how long the ball was in the air.</p><br/>
+                <p><b>B.</b> Find the ball's initial velocity: magnitude and angle above the horizontal.</p><br/>
+                <p><b>C.</b> Suppose the ball follows the same trajectory, except that another player catches the ball at a height of 1.7 meters above the ground (rather than letting the ball drop to the ground). At what time and x-position would the player catch the ball?</p><br/>
+                <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
+              </div>
+              <div className="card-reveal">
+                <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
+                <img src={ex7football} width="100%"/>
+                <p><b>A. </b>We know the football reaches a max height of 25 meters, but have no initial velocity to work with. Due to symmetry, the time it takes to get to this 25m height is the same as the time to come back down.</p>
+                <p>Since <InlineMath>v_y = 0m/s</InlineMath> when the ball's at its highest point, we can use the y-displacement equation to figure out how long it takes for something to fall 25 meters!</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`-25 = (0)t -4.9t^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`-25 = (0)t -4.9t^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`t_{fall} = 2.259s`}</InlineMath> is how long it takes a ball to drop 25 meters.</p>
+                <p>Twice that value will tell us how long the ball is in the air...</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`t = 4.518s`}</InlineMath></p>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>B. </b>The initial velocity is a 2-dimensional vector, for which we have no components or angles (yet). Finding v<sub>ox</sub> is simple enough, now that we know how long the ball's in the air.</p>
+                <div className="col s12 m12 l12">
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{ox} = Δx/t`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{ox} = (65m)/(4.518s)`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}><InlineMath>{String.raw`v_{ox} = 14.39m/s`}</InlineMath></p>
+                </div>
+                  <p>Meanwhile, v<sub>oy</sub> can be found with v-squared, definition of acceleration, or displacement equations!</p>
+                <div className="col s6 m6 l6">
+                  <p><InlineMath>{String.raw`v_{fy}^2 = v_{oy}^2 + 2aΔy`}</InlineMath></p>
+                  <p><em>since v<sub>y</sub> is zero at y=25m...</em></p>
+                  <p><InlineMath>{String.raw`0^2 = v_{oy}^2 + 2(-9.8)(25)`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{oy}^2 = 490`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{oy} = 22.14m/s`}</InlineMath></p>
+                </div>
+                <div className="col s6 m6 l6">
+                  <p><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                  <p><em>We could plug in Δy=25 at time t = 2.259s, but it's easier to use total time in air (since Δy=0).</em></p>
+                  <p><InlineMath>{String.raw`0 = v_{oy}(4.518) + -4.9(4.518)^2`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_{oy} = 22.14m/s`}</InlineMath></p>
+                </div>
+                <p>Either way, we have the x and y-components, from which we can get speed and angle.</p>
+                <div className="col s5 m5 l5">
+                  <img src={ex7B} width="100%"></img>
+                </div>
+                <div className="col s7 m7 l7">
+                  <p><InlineMath>{String.raw`v_o^2 = v_{ox}^2 + v_{oy}^2`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_o = \sqrt{(14.39)^2 + (22.14)^2}`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`v_o = 26.41m/s`}</InlineMath> initial speed.</p>
+                  <hr></hr>
+                  <p><InlineMath>{String.raw`tan\theta = v_{oy}/v_{ox}`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`tan\theta = 22.14/14.39`}</InlineMath></p>
+                  <p><InlineMath>{String.raw`\theta = 56.98^\circ`}</InlineMath> above the horizontal.</p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-4"></div>
+                <p><b>C. </b>If the ball is caught at a height of 1.7 meters, we can apply the y-displacement equation to find time of catch.</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`1.7 = 22.14t -4.9t^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`1.7 = 22.14t -4.9t^2`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`t= 4.44s, 0.078s`}</InlineMath> are the times when the ball's at height 1.7m.</p>
+                <p>Since the ball is caught just before hitting the floor, <InlineMath>{String.raw`t= 4.44s`}</InlineMath></p>
+                <p>How far does the ball travel in that time?</p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = v_{ox}t`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = (14.39m/s)(4.44s)`}</InlineMath></p>
+                <p style={{textIndent: "2em"}}><InlineMath>{String.raw`Δx = 63.89m`}</InlineMath></p>
+                <p>...these values makes sense! The ball would've travelled 65m in 4.518s without a catcher.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col s12 m6 l6">{/* EX 8 */}
+            <div className="card"> 
+              <div className="card-content" style={{minHeight: "50vh"}}>
+                <span className="card-title grey-text text-darken-4">Ex 8. Using a Given Final Velocity</span>
                 <p style={{textIndent: "20px", fontWeight: "500"}}></p><br/>
                 <p><b>A.</b> </p><br/>
                 <p><b>B.</b> </p><br/>
@@ -352,30 +567,92 @@ const Lesson1_3 = () => {
               </div>
             </div>
           </div>
-          <div className="col s12 m6 l6">{/* EX 7 */}
+
+          <div className="col s12 m6 l6">{/* EX 9 */}
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
-                <span className="card-title grey-text text-darken-4">Ex 7. Shortcuts in Analyzing Parabolic Trajectories</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>A football is kicked from the end of a flat football field. It reaches a maximum height of 25 meters, and hits the field 68 meters away from where it was kicked.</p><br/>
-                <p><b>A.</b> </p><br/>
-                <p><b>B.</b> </p><br/>
-                <p><b>C.</b> </p><br/>
+                <span className="card-title grey-text text-darken-4">Ex 9. Finding the Optimal Launch Angle</span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>Soccer player Max wants to figure out the best angle at which he should kick his ball in order to maximize the distance it travels before landing. He kicks balls from the ground at a speed of 11.5 m/s.</p><br/>
+                <p><b>A.</b> Find the equation that relates how far away the ball lands with the launch angle.</p>
+                <br/>
+                <p><b>B.</b> Find how far away it lands with launch angles θ = 0<sup>o</sup>, 25<sup>o</sup>, 30<sup>o</sup>, and 65<sup>o</sup>.</p>
+                <br/>
+                <p><b>C.</b> What's the maximum Δx Max can achieve? At what launch angle does this occur?</p>
+                <p style={{textIndent:"3em"}}><em>You may require trig identity: <InlineMath>{String.raw`sin(\theta)cos(\theta) = \frac{1}{2}sin(2\theta)`}</InlineMath></em></p>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">Solution<i className="material-icons right">close</i></span>
-                
+                <div className="col s12 l7 m7">
+                  <p className="center"><em>Max kicks his ball at different angles.</em></p>
+                  <img src={maxSoccer} width="100%"/>
+                </div>
+                <div className="col s12 l5 m5">
+                  <h6 className="center">There are two givens:</h6>
+                  <p>1. <InlineMath>Δy = 0</InlineMath> upon landing.</p>
+                  <p>2. <InlineMath>v_o = 10.5m/s</InlineMath>, angled θ<sup>o</sup> above the horizontal.</p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-3"></div>
+                <div className="col s12 m12 l12">
+                  <p><b>A. </b>To get an equation relating Δx to θ, we must <span className="pink-text text-accent-3">eliminate the time parameter</span>.</p>
+                  <p className="center"><em><b>1. Write out displacement equations for x and y.</b></em></p>
+                  <div className="col s6 m6 l6">
+                    <p><InlineMath>{`Δx = v_{ox}`}</InlineMath><span className="pink-text text-accent-3"><InlineMath>t</InlineMath></span></p>
+                    <p><InlineMath>{String.raw`Δx = v_ocosθ`}</InlineMath><span className="pink-text text-accent-3"><InlineMath>t</InlineMath></span></p>
+                    <p className="center"><em><b>3. Plug in <InlineMath>t</InlineMath> from the Δy EQ.</b></em></p>
+                    <p><InlineMath>{String.raw`Δx = v_ocosθ`}</InlineMath><span className="pink-text text-accent-3"><InlineMath>{String.raw`(\frac{v_o}{4.9}sinθ)`}</InlineMath></span></p>
+                    <p><InlineMath>{String.raw`Δx = \frac{v_o^2}{4.9}cosθsinθ`}</InlineMath></p>
+                    <p><InlineMath>{String.raw`Δx = \frac{(11.5)^2}{4.9}cosθsinθ`}</InlineMath></p>
+                    <p><InlineMath>{String.raw`Δx = 26.99cosθsinθ`}</InlineMath></p>
+                  </div>
+                  <div className="col s6 m6 l6">
+                    <p><InlineMath>{String.raw`Δy = v_{oy}t + \frac{1}{2}at^2`}</InlineMath></p>
+                    <p><InlineMath>{String.raw`Δy = v_osin(θ)t + \frac{1}{2}at^2`}</InlineMath></p>
+                    <p className="center"><em><b>2. Isolate <span className="pink-text text-accent-3">time of landing <InlineMath>t</InlineMath></span>.</b></em></p>
+                    <p><InlineMath>{String.raw`0 = v_osin(θ)t - 4.9t^2`}</InlineMath></p>
+                    <p><InlineMath>{String.raw`0 = t(v_osinθ - 4.9t)`}</InlineMath></p>
+                    <p className="pink-text text-accent-3"><InlineMath>{String.raw`t = \frac{v_o}{4.9}sinθ`}</InlineMath></p>
+                  </div>
+                  <div className="col s12 m12 l12">
+                    <p className="center"><em>Applying trig identity: <InlineMath>{String.raw`sin(\theta)cos(\theta) = \frac{1}{2}sin(2\theta)`}</InlineMath>...</em></p>
+                    <p><InlineMath>{String.raw`Δx = 26.99(\frac{1}{2}sin(2\theta))`}</InlineMath></p>
+                    <p><InlineMath>{String.raw`Δx = 13.495sin(2\theta)`}</InlineMath> is our relation between distance and launch angle.</p>
+                  </div>
+                </div>
+                <div className="col s12 m12 l12 amber darken-3"></div>
+                <div className="col s12 m12 l12">
+                  <p><b>B. </b>Δx for angles 0<sup>o</sup>, 25<sup>o</sup>, 30<sup>o</sup>, and 65<sup>o</sup> can now be found by plugging into our equation from part A.</p>
+                  <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = 13.495sin(2(0)) = 13.495sin(0) = 0m`}</InlineMath></p>
+                  <p className="center"><em>The ball never left the ground if θ=0<sup>o</sup>!</em></p>
+                  <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = 13.495sin(2(25)) = 13.495sin(50) = 10.3m`}</InlineMath></p>
+                  <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = 13.495sin(2(30)) = 13.495sin(60) = 11.7m`}</InlineMath></p>
+                  <p style={{textIndent:"4em"}}><InlineMath>{String.raw`Δx = 13.495sin(2(65)) = 13.495sin(130) = 10.3m`}</InlineMath></p>
+                  <p style={{textIndent: "2em"}}>It's definitely possible to solve part B without the solution to A: just plug in each angle to the Δy equation, find the time in the air, and plug that result into the Δx equation to find distance covered.</p>
+                </div>
+                <div className="col s12 m12 l12 amber darken-3"></div>
+                <div className="col s12 m12 l12">
+                  <p><b>C. </b>Finding the angle that maximizes Δx is typically a Calculus problem, where we'd find θ such that the first derivative <InlineMath>{String.raw`\frac{dx}{d\theta}`}</InlineMath> is zero.</p>
+                  <p>But there's an elegant solution that uses just a bit of trigonometry logic.</p>
+                  <p style={{textIndent: "4em"}}><InlineMath>{String.raw`Δx = 13.495`}</InlineMath><span className="blue-text text-darken-3"><InlineMath>sin(2\theta)</InlineMath></span></p>
+                  <p>Notice that <span className="blue-text text-darken-3"><InlineMath>{String.raw`sin(2\theta)`}</InlineMath></span> can be any number between -1 and 1!</p>
+                  <h6>And so the maximum displacement is <InlineMath>{String.raw`Δx = 13.495m`}</InlineMath></h6>
+                  <p className="center">This occurs when <InlineMath>{String.raw`sin(2\theta) = 1`}</InlineMath>...</p>
+                  <h6><InlineMath>{String.raw`\theta = 45^{\circ}`}</InlineMath></h6>
+                </div>
               </div>
             </div>
           </div>
-          <div className="col s12 m6 l6">{/* EX 8 */}
+          
+          <div className="col s12 m6 l6">{/* EX 10 */}
             <div className="card"> 
               <div className="card-content" style={{minHeight: "50vh"}}>
-                <span className="card-title grey-text text-darken-4">Ex 8. Concept Name</span>
-                <p style={{textIndent: "20px", fontWeight: "500"}}>Problem</p><br/>
-                <p><b>A.</b> </p><br/>
-                <p><b>B.</b> </p><br/>
-                <p><b>C.</b> </p><br/>
+                <span className="card-title grey-text text-darken-4">Ex 10. Finding Two Possible Launch Angles, <InlineMath>\theta</InlineMath></span>
+                <p style={{textIndent: "20px", fontWeight: "500"}}>In a carnival game, Michelle throws her beanbag at 8 m/s. She hits a target positioned 5 meters away at the same height as it had when thrown.</p><br/>
+                <p><b>A.</b> At what angle(s) did Michelle throw her beanbag?</p>
+                <p className="center"><em>To find the angles, you may require trig identity: <InlineMath>{String.raw`sin(\theta)cos(\theta) = \frac{1}{2}sin(2\theta)`}</InlineMath></em></p>
+                <br/>
+                <p><b>B.</b> For each angle, how much time elapses between throwing and hitting the target?</p><br/>
+                <p><b>C.</b> For every beanbag launched at speed <em>v</em> and angle θ that hits the target, is there <u>always</u> a second angle θ at which the beanbag will land in the same place?</p><br/>
                 <button className="btn-small amber darken-4 activator" style={{position:"absolute", bottom:"2%", right: "2%"}}>Solution</button>
               </div>
               <div className="card-reveal">

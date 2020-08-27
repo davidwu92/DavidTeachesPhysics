@@ -32,8 +32,8 @@ const examples = () =>{
         </div>
       </div>
     
-    
-    
+    θ 
+    Δ
     </>
   )
 }
