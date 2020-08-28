@@ -265,10 +265,10 @@ const Lesson1_3 = () => {
         <h4 className="blue-text text-darken-3">2D Projectile Motion</h4>
         
         <div className="row" style={{display:"flex", flexWrap:"wrap"}}>{/* 2D Projectile Motion CONTENT */}
-          <div className="col s6 m6 l6 blue lighten-4">
+          <div className="col s12 m6 l6 blue lighten-4">
             <h5>Consider the following situation:</h5>
             <p><b><span className="red-text text-darken-1">Patricia</span>, <span className="green-text text-darken-2">Xena</span>, and <span className="blue-text text-darken-3">Yolanda</span> stand together at the edge of a field.</b></p>
-            <p className="red-text text-darken-1">Patricia punts a ball with an initial speed of <InlineMath>v</InlineMath>, at some angle above the horizontal <InlineMath>\theta</InlineMath>.</p>
+            <p className="red-text text-darken-1">Patricia punts a ball with an initial speed of <InlineMath>v_o</InlineMath>, at some angle above the horizontal <InlineMath>\theta</InlineMath>.</p>
             <p className="green-text text-darken-2">As soon as Patricia kicks her ball, Xena runs forward such that she is always directly under the ball.</p>
             <p className="blue-text text-darken-3">Meanwhile, Yolanda throws her ball upward, such that her ball constantly has the same height as Patricia's punted ball.</p>
             {/* <p className="center"><em>How fast must Xena be running? What initial speed does Yolanda need to throw her ball?</em></p> */}
@@ -282,52 +282,56 @@ const Lesson1_3 = () => {
               <p><em>You can drag Patricia's ball along its parabolic trajectory to see where all three objects are at different points in time!</em></p>
             </div>
           </div>
-          <div className="col s6 m6 l6 blue darken-3" style={{minWidth: "500px", minHeight: "400px"}}>
+          <div className="col s12 m6 l6 blue darken-3">
             <h6 className="center white-text"><em>Points P, X, and Y over time.</em></h6>
             <iframe src="https://www.desmos.com/calculator/ozcqusfgbn?embed" width="100%" height="90%"></iframe>
           </div>
 
           <div className="col s12 m12 l12">
-              <h5 className="center">The Displacement Equations as <InlineMath>x(t)</InlineMath> and <InlineMath>y(t)</InlineMath> functions</h5>
-              <p style={{textIndent: "4em"}}>Like any object flying around on a 2-D coordinate system, Patricia's ball has x- and y-displacements that are functions of time. Since this is a projectile motion problem (where flying objects have constant acceleration, g=9.8m/s<sup>2</sup> pointed down), we can use the x- and y-displacement equations as functions that model exactly where the ball is at time <em>t</em>.</p>
-              <div className="col s6 m6 l6 center">
-                <h6><InlineMath>{String.raw`Δx=v_{ox}t + \frac{1}{2}a_xt^2`}</InlineMath></h6>
-                <h6><InlineMath>{String.raw`Δx=v_ocos(\theta)t`}</InlineMath></h6>
-              </div>
-              <div className="col s6 m6 l6 center">
-                <h6><InlineMath>{String.raw`Δy=v_{oy}t + \frac{1}{2}a_yt^2`}</InlineMath></h6>
-                <h6><InlineMath>{String.raw`Δy=v_osin(\theta)t - \frac{1}{2}gt^2`}</InlineMath></h6>
-              </div>
-              <p className="center"><em>The x- and y-displacements of the ball are two parametric equations that, together, draw out the ball's path through space.</em></p>
-              <div className="col s12 m12 l12 blue"></div>
-              <div className="col s8 m8 l8">
-                <ol>
-                  <h6>
-                    <h5 className="center">For 2D motion, keep these pointers in mind...</h5>
-                    <br/>
-                    <li>Any relevant vectors and the equations containing them <u>must be analyzed using x- and y-component vectors</u>.</li>
-                    <p className="center"><em>Given initial velocity <InlineMath>v_o</InlineMath> pointed <InlineMath>\theta^\circ</InlineMath> above the horizontal, practice finding <InlineMath>{`v_{ox}`}</InlineMath> and <InlineMath>{`v_{oy}`}</InlineMath>.</em></p>
-                    <br/>
-                    <li>The two sets of kinematics equations (one for each direction) are united by the time parameter.</li>
-                    <p className="center"><em>If you can find the time <u>when</u> the object reaches a particular <em>x</em>-position...</em></p>
-                    <p className="center"><em>...it should help you find its y-position at that time. And vice versa!</em></p>
-                    <br/>
-                    <li>Acceleration due to gravity almost always points in the negative-y direction: <InlineMath>a_x = 0m/s^2</InlineMath> and <InlineMath>a_y = -9.8m/s^2</InlineMath>.</li>
-                    <p className="center"><em>Don't <u>ever</u> mistakenly put in <InlineMath>a=-9.8m/s</InlineMath> for an x-equation: <InlineMath>{String.raw`Δx = 5t -4.9t^2`}</InlineMath>.</em></p>
-                    <br/>
-                    <li>Without air resistance, projectiles follow a parabolic path. Using symmetry...</li>
-                  </h6>
-                </ol>
-                  <p className="center"><em>If a projectile's starting and final positions have the same height (<InlineMath>{String.raw`y_o = y_f`}</InlineMath>)...</em></p>
-                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`v_{oy} = -v_{fy}`}</InlineMath> ... initial and final y-speeds are equal and opposite.</p>
-                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`\theta_o = -\theta_f`}</InlineMath> ... v<sub>o</sub>'s angle above horizontal is the opposite of v<sub>f</sub>'s angle.</p>
-                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`t_{apex} = \frac{1}{2}t_{land}`}</InlineMath> ...the time taken to reach the top of its trajectory is half the time it takes to hit the floor.</p>
-                  <p style={{textIndent: "5%"}}><InlineMath>{String.raw`x_{apex} = \frac{1}{2}x_f`}</InlineMath> ...same with x-displacement; half the max distance is where the ball's at its apex.</p>
+            <h5 className="center">The Displacement Equations as <InlineMath>x(t)</InlineMath> and <InlineMath>y(t)</InlineMath> functions</h5>
+            <p style={{textIndent: "4em"}}>Like any object flying around on a 2-D coordinate system, Patricia's ball has x- and y-displacements that are functions of time. Since this is a projectile motion problem (where flying objects have constant acceleration, g=9.8m/s<sup>2</sup> pointed down), we can use the x- and y-displacement equations as functions that model exactly where the ball is at time <em>t</em>.</p>
+            <div className="col s6 m6 l6 center">
+              <h6><InlineMath>{String.raw`Δx=v_{ox}t + \frac{1}{2}a_xt^2`}</InlineMath></h6>
+              <h6><InlineMath>{String.raw`Δx=v_ocos(\theta)t`}</InlineMath></h6>
             </div>
-            <div className="col s4 m4 l4">
-              <h5 className="center">2D Kinematics Formula Sheet</h5>
-              <p className="center"><em>Each of these equations are for the x-direction only! <br/>Use "y" instead of x for the other direction.</em></p>
-              <div className="col s12 m12 l12">
+            <div className="col s6 m6 l6 center">
+              <h6><InlineMath>{String.raw`Δy=v_{oy}t + \frac{1}{2}a_yt^2`}</InlineMath></h6>
+              <h6><InlineMath>{String.raw`Δy=v_osin(\theta)t - \frac{1}{2}gt^2`}</InlineMath></h6>
+            </div>
+            <p className="center"><em>The x- and y-displacements of the ball are two parametric equations that, together, draw out the ball's path through space.</em></p>
+          </div>
+
+          <div className="col s12 m12 l12 blue"></div>
+          <div className="row" style={{display:"flex", flexWrap:"wrap"}}>
+            <div className="col s12 m8 l8 blue lighten-2">
+              <ol>
+                <h6>
+                  <h5>Four important reminders before problem-solving</h5>
+                  <br/>
+                  <b><li>Vectors and the equations containing them <u>must be analyzed using x- and y-component vectors</u>.</li></b>
+                  <p className="center"><em>Given initial velocity <InlineMath>v_o</InlineMath> pointed <InlineMath>\theta^\circ</InlineMath> above the horizontal, practice finding <InlineMath>{`v_{ox}`}</InlineMath> and <InlineMath>{`v_{oy}`}</InlineMath>.</em></p>
+                  <br/>
+                  <b><li>The two sets of kinematics equations (one for each direction) are united by the time parameter.</li></b>
+                  <p className="center"><em>If you can find the time <u>when</u> the object reaches a particular <em>x</em>-position...</em></p>
+                  <p className="center"><em>...it should help you find its y-position at that time. And vice versa!</em></p>
+                  <br/>
+                  <b><li>A flying projectile's acceleration <u>almost always</u> points in the negative-y direction:</li></b>
+                  <p className="center"><InlineMath>{String.raw`a_x = 0\frac{m}{s^2}`}</InlineMath>&nbsp;&nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp;&nbsp;<InlineMath>{String.raw`a_y = -g = -9.8\frac{m}{s^2}`}</InlineMath></p>
+                  <p className="center"><em>Don't mistakenly plug in "<InlineMath>{String.raw`a=-9.8\frac{m}{s^2}`}</InlineMath>" for an x-component equation: <InlineMath>{String.raw`Δx = 5t -4.9t^2`}</InlineMath>.</em></p>
+                  <br/>
+                  <b><li>If a projectile's starting and final positions have the same height (<InlineMath>{String.raw`y_o = y_f`}</InlineMath>), we can use the parabolic path's symmetry to our advantage...</li></b>
+                </h6>
+              </ol>
+                <p style={{textIndent: "8%"}}><InlineMath>{String.raw`v_{oy} = -v_{fy}`}</InlineMath> ... initial and final y-speeds are equal and opposite.</p>
+                <p style={{textIndent: "8%"}}><InlineMath>{String.raw`\theta_o = -\theta_f`}</InlineMath> ... v<sub>o</sub>'s angle above horizontal is the opposite of v<sub>f</sub>'s angle.</p>
+                <p style={{textIndent: "8%"}}><InlineMath>{String.raw`t_{apex} = \frac{1}{2}t_{land}`}</InlineMath> ...the time taken to reach the top of its trajectory is half the time it takes to hit the floor.</p>
+                <p style={{textIndent: "8%"}}><InlineMath>{String.raw`x_{apex} = \frac{1}{2}x_f`}</InlineMath> ...same with x-displacement; half the max distance is where the ball's at its apex.</p>
+            </div>
+            <div className="col s12 m4 l4 white" style={{display:"flex", flexDirection:"column", justifyContent:"space-evenly"}}>
+              <h4 className="center blue-text text-darken-3">2D Kinematics Toolbox</h4>
+              <div className="col s5 m12 l12">
+                <h5 className="center"><u>Formulas and Definitions</u></h5>
+                <p><em>Each of these equations are for the x-direction only! <br/> Of course use y-components instead for vertical motion.</em></p>
                 <div className="col s6 m6 l6">
                   <p className="center">Definition of Velocity</p>
                   <h6 className="center"><InlineMath>{String.raw`\vec{v_{x}}_{avg} = \frac{Δx}{t}`}</InlineMath></h6>
@@ -346,9 +350,9 @@ const Lesson1_3 = () => {
                   <h6 className="center"><InlineMath>{String.raw`v_{fx}^2 = v_{ox}^2 + 2aΔx`}</InlineMath></h6>
                 </div>
               </div>
-              <div className="col s12 m12 l12 blue darken-3"></div>
-              <div className="col s12 m12 l12">
-                <h5 className="center">Vectors and Their Components</h5>
+              <div className="col s2 m12 l12 blue darken-3"></div>
+              <div className="col s5 m12 l12">
+                <h5 className="center"><u>Vectors and their Components</u></h5>
                 <p><em>For any vector (<InlineMath>{String.raw`\vec{v_o}`}</InlineMath> in these sample) pointed θ degrees above the horizontal...</em></p>
                 <div className="col s6 m6 l6 center">
                   <h6><InlineMath>{String.raw`v_o^2 = v_{ox}^2 + v_{oy}^2`}</InlineMath></h6>
@@ -365,6 +369,7 @@ const Lesson1_3 = () => {
               </div>
             </div>
           </div>
+
         </div>
         <div className="amber darken-1 row">{/* 2D PROJECTILE EXAMPLES */}
           <h5 className="center white-text">2D Projecile Motion: Example Problems and Solutions</h5>
