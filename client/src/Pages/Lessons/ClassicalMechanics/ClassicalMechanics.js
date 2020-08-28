@@ -34,22 +34,21 @@ const ClassicalMechanics = () => {
         <div className="container" id="tableContents">
           {/* <h4 className="blue-text text-darken-1">Chapter 1: Kinematics</h4> */}
           <h3 className="center white-text"  style={{marginTop:"0"}}>Table of Contents</h3>
-          <h4><a className="blue-text" onClick={()=>{history.push('/kinematics')}}>Chapter 1. Kinematics</a></h4>
-          <button className="blue btn-small" onClick={()=>{history.push('/lesson1_1')}}>Lesson 1.1: Physics as a Lab Science</button>
-          <br/>
-          <br/>
-          <button className="blue btn-small" onClick={()=>{history.push('/lesson1_2')}}>Lesson 1.2: Intro to Kinematics</button>
-          <br/>
-          <br/>
-          <button className="blue btn-small" onClick={()=>{history.push('/lesson1_3')}}>Lesson 1.3: Kinematics Equations in 1D</button>
-          <br/>
-          <br/>
-          <button className="blue btn-small" onClick={()=>{history.push('/lesson1_4')}}>Lesson 1.4: Kinematics Equations in 2D</button>
-          <br/>
-          <br/>
-          <button className="blue btn-small" onClick={()=>{history.push('/lesson1_4')}}>Lesson 1.5: Frames of Reference and Relative Motion</button>
-          <br/>
-          <br/>
+          <div className="row">
+            <div className="col s12 m6 l6" style={{color: "#ff00ffff"}}>
+              <h4 className="center"><a  style={{color: "#ff00ffff"}} onClick={()=>{history.push('/kinematics')}}><u>Chapter 1. Kinematics</u></a></h4>
+              <h5><a onClick={()=>{history.push('/lesson1_1')}}><u>Lesson 1.1: Physics as a Lab Science</u></a></h5>
+              <p style={{textIndent:"2em"}}>A brief discussion about data collection, accuracy and precision.</p>
+              <h5><a onClick={()=>{history.push('/lesson1_2')}}><u>Lesson 1.2: Intro to Kinematics</u></a></h5>
+              <p style={{textIndent:"2em"}}>Introducing essential quantities for describing motion: displacement, velocity, and acceleration.</p>
+              <h5><a onClick={()=>{history.push('/lesson1_3')}}><u>Lesson 1.3: Kinematics Equations in 1D</u></a></h5>
+              <p style={{textIndent:"2em"}}>How we use equations and strategies to analyze one-dimensional motion. Also touches on freefall and the acceleration due to gravity.</p>
+              <h5><a onClick={()=>{history.push('/lesson1_4')}}><u>Lesson 1.4: Kinematics Equations in 2D</u></a></h5>
+              <p style={{textIndent:"2em"}}>Discusses two-dimensional motion with vectors, vector components, and projectiles.</p>
+              <h5><a onClick={()=>{history.push('/lesson1_4')}}><u>Lesson 1.5: Frames of Reference and Relative Motion</u></a></h5>
+              <p style={{textIndent:"2em"}}>How objects move relative to non-stationary observers.</p>
+            </div>
+          </div>
         </div>
       </div>
     </>
