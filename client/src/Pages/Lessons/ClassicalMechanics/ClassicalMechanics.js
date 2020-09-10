@@ -45,7 +45,7 @@ const ClassicalMechanics = () => {
               <p style={{textIndent:"2em"}}>How we use equations and strategies to analyze one-dimensional motion. Also touches on freefall and the acceleration due to gravity.</p>
               <h5><a onClick={()=>{history.push('/lesson1_4')}}><u>Lesson 1.4: Kinematics Equations in 2D</u></a></h5>
               <p style={{textIndent:"2em"}}>Discusses two-dimensional motion with vectors, vector components, and projectiles.</p>
-              <h5><a onClick={()=>{history.push('/lesson1_4')}}><u>Lesson 1.5: Frames of Reference</u></a></h5>
+              <h5><a onClick={()=>{history.push('/lesson1_5')}}><u>Lesson 1.5: Frames of Reference</u></a></h5>
               <p style={{textIndent:"2em"}}>How objects move relative to non-stationary observers.</p>
             </div>
           </div>

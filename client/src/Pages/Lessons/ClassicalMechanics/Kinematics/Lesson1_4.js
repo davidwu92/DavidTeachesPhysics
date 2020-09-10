@@ -13,7 +13,8 @@ import ex6C from './1-4-Ex6C.png'
 import ex7football from './1-4-Ex7.png'
 import ex7B from './1-4-Ex7B.png'
 import ex8 from './1-4-Ex8.png'
-const Lesson1_3 = () => {
+
+const Lesson1_4 = () => {
   const history = useHistory()
 
   return (
@@ -34,17 +35,17 @@ const Lesson1_3 = () => {
             <br/>
             <br/>
             If you know your trigonometry, analyzing motion in <em>two</em> dimensions isn't actually much more difficult!
-            <br/>
-            <br/>
-            <div className="indigo-text text-darken-4 grey lighten-3" style={{padding:"1px 2% 1px 2%"}}>
-              <h5>Lesson Contents</h5>
-              <div className="indigo darken-4" style={{height: "1px"}}></div><br/>
+          </h6>
+          <div className="indigo-text text-darken-4 grey lighten-3" style={{padding:"1px 2% 1px 2%"}}>
+            <h5>Lesson Contents</h5>
+            <div className="indigo darken-4" style={{height: "1px"}}></div><br/>
+            <h6>
               <li><span onClick={()=>{document.getElementById("section1").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Vectors and Vector Components</u></span> reviews all prerequisite trigonometry and vector analysis skills.</li><br/>
               <li><span onClick={()=>{document.getElementById("section2").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>2D Projectile Motion</u></span> the paragon of kinematics problems, ubiquitous to every introductory physics course.</li><br/>
-              <li><span onClick={()=>{document.getElementById("section3").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Relative Motion</u></span> studies the behaviors of moving objects from different frames of reference.</li><br/>
-              <li><span onClick={()=>{document.getElementById("section4").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Problem-Solving Guide: 2D Kinematics</u></span></li><br/>
-            </div>
-          </h6>
+              {/* <li><span onClick={()=>{document.getElementById("section3").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Relative Motion</u></span> studies the behaviors of moving objects from different frames of reference.</li><br/> */}
+              {/* <li><span onClick={()=>{document.getElementById("section4").scrollIntoView({behavior: "smooth"})}} className="blue-text text-darken-1"><u>Problem-Solving Guide: 2D Kinematics</u></span></li><br/> */}
+            </h6>
+          </div>
         </div>
       </div>
 
@@ -763,28 +764,7 @@ const Lesson1_3 = () => {
 
       </div>{/* Section 2 End*/}
 
-      <div id="section3" className="green lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 3 Relative Motion*/}
-        <h4 className="green-text text-darken-3">Relative Motion</h4>
-        <p style={{textIndent: "1.2em"}}>
-          <em>
-            As you drive on the highway at 70 mph, you steadily overtake cars driving 65mph in slower lanes, watching them move "backwards". As an aggressive driver speeds by you at 90mph, it would appear he's moving 20mph (relative to you).
-            Meanwhile, the cars on the other side of the highway are speeding in the opposite direction of you, moving an astounding 140 mph relative to you!
-          </em>
-        </p>
-        <p>So far, in all our kinematics studies, we've analyzed each object's motion relative to a stationary <b>frame of reference</b> (think: where's the "origin" positioned in our x-y coordinate system? Has it ever been moving?). It's time we learn to empathize with moving observers, and analyze motion from their perspectives.</p>
-        <div className="row">{/* RELATIVE MOTION CONTENT */}
-          <h5>Noninertial Frames</h5>
-          <p>A noninertial frame of reference is one that's accelerating.</p>
-          <p>Imagine a ball sitting on a flat train floor. While the train is moving at a constant 100m/s relative to the ground, the ball appears to sit still on the train floor. But if the train hits the brakes, accelerating in the negative direction, the ball will start to roll forward!</p>
-          
-          <h5>Inertial Frames</h5>
-          <p>An inertial frame of reference is one that isn't accelerating: it has constant velocity.</p>
-        </div>
-        <div className="amber darken-1 row">{/* RELATIVE MOTION EXAMPLE PROBLEMS */}
-          <h5 className="center white-text">Relative Motion: Example Problems and Solutions</h5>
-        </div>
 
-      </div>{/* Section 3 End*/}
 
       <div id="section4" className="blue lighten-5" style={{padding:"1vh 6vw"}}>{/* SECTION 4 Problem-Solving Guide*/}
         <h4 className="blue-text text-darken-3">Problem-Solving Guide: 2D Kinematics</h4>
@@ -799,4 +779,4 @@ const Lesson1_3 = () => {
   )
 }
 
-export default Lesson1_3
+export default Lesson1_4
